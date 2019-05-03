@@ -6,6 +6,8 @@
 package umcarro;
 
 
+import java.util.Date;
+
 public class Cliente extends Utilizador{
 
 
@@ -17,7 +19,7 @@ public class Cliente extends Utilizador{
     private Float cordY;
 
 
-    public Cliente(String username, String nome, String password, String address, int dataNasc, Integer nCartaoCred, String validadeCartaoCred, Integer codSeguranca, Float cordX, Float cordY) {
+    public Cliente(String username, String nome, String password, String address, Date dataNasc, Integer nCartaoCred, String validadeCartaoCred, Integer codSeguranca, Float cordX, Float cordY) {
         super(username, nome, password, address, dataNasc);
         this.nCartaoCred = nCartaoCred;
         this.validadeCartaoCred = validadeCartaoCred;
@@ -26,4 +28,15 @@ public class Cliente extends Utilizador{
         this.cordY = cordY;
     }
 
+    @Override
+    public String toString() {
+        return  "Cliente{" + "\n" +
+                super.toString() + "\n" +
+                "nCartaoCred=" + nCartaoCred + "\n" +
+                ", validadeCartaoCred='" + validadeCartaoCred + '\'' + "\n" +
+                ", codSeguranca=" + codSeguranca + "\n" +
+                ", cordX=" + cordX + "\n" +
+                ", cordY=" + cordY + "\n" +
+                '}';
+    }
 }

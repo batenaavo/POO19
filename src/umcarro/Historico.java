@@ -24,4 +24,14 @@ public class Historico {
 
     }
 */
+    @Override
+    public String toString() {
+        return "Historico{" +
+                "cliente=" + cliente +
+                ", veiculo=" + veiculo +
+                ", kmsPercorridos=" + kmsPercorridos +
+                ", valorAluguer=" + valorAluguer +
+                ", velocidadeMedia=" + velocidadeMedia +
+                '}';
+    }
 }

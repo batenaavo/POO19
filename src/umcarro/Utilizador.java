@@ -77,6 +77,15 @@ public class Utilizador {
     public void setMorada(String morada) {
         this.morada = morada;
     }
+
+    @Override
+    public String toString() {
+        return  "username='" + username + '\'' + ",\n" +
+                "nome='" + nome + '\'' + ",\n" +
+                "dataNasc=" + dataNasc + ",\n" +
+                "password='" + password + '\'' + ",\n" +
+                "morada='" + morada + '\'';
+    }
 }
 
 

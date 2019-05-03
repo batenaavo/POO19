@@ -14,8 +14,6 @@ public class Veiculo {
     private String combustivel;
     private Integer eficiencia;
     private Integer precoPorKm;
-    private String historico;
-    private Integer rating;
     private Float cordX;
     private Float cordY;
 
@@ -27,21 +25,17 @@ public class Veiculo {
         this.combustivel = null;
         this.eficiencia = null;
         this.precoPorKm = null;
-        this.historico = null;
-        this.rating = null;
         this.cordX = null;
         this.cordY = null;
     }
 
-    public Veiculo(String matricula, String modelo, String marca, String combustivel, Integer eficiencia, Integer precoPorKm, String historico, Integer rating) {
+    public Veiculo(String matricula, String modelo, String marca, String combustivel, Integer eficiencia, Integer precoPorKm, Float cordX, Float cordY) {
         this.matricula = matricula;
         this.modelo = modelo;
         this.marca = marca;
         this.combustivel = combustivel;
         this.eficiencia = eficiencia;
         this.precoPorKm = precoPorKm;
-        this.historico = historico;
-        this.rating = rating;
         this.cordX = cordX;
         this.cordY = cordY;
     }
@@ -53,8 +47,6 @@ public class Veiculo {
         this.combustivel = c.getCombustivel();
         this.eficiencia = c.getEficiencia();
         this.precoPorKm = c.getPrecoPorKm();
-        this.historico = c.getHistorico();
-        this.rating = c.getRating();
         this.cordX = c.getCordX();
         this.cordY = c.getCordY();
 
@@ -108,22 +100,6 @@ public class Veiculo {
         this.precoPorKm = precoPorKm;
     }
 
-    public String getHistorico() {
-        return historico;
-    }
-
-    public void setHistorico(String historico) {
-        this.historico = historico;
-    }
-
-    public Integer getRating() {
-        return rating;
-    }
-
-    public void setRating(Integer rating) {
-        this.rating = rating;
-    }
-
     public Float getCordX() {
         return cordX;
     }
@@ -138,5 +114,19 @@ public class Veiculo {
 
     public void setCordY(Float cordY) {
         this.cordY = cordY;
+    }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "matricula='" + matricula + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", marca='" + marca + '\'' +
+                ", combustivel='" + combustivel + '\'' +
+                ", eficiencia=" + eficiencia +
+                ", precoPorKm=" + precoPorKm +
+                ", cordX=" + cordX +
+                ", cordY=" + cordY +
+                '}';
     }
 }

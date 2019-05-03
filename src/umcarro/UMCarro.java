@@ -7,18 +7,24 @@ package umcarro;
 
 
 
+import java.util.Date;
 import java.util.HashMap;
 
 public class UMCarro {
 
-
     public static void main(String[] args) {
-        private HashMap<String,Cliente> clientes;
-        private HashMap<String,Proprietario> proprietarios;
+        HashMap<String,Cliente> clientes = new HashMap<>();
+        HashMap<String,Proprietario> proprietarios = new HashMap<>();
 
-        this.clientes = new HashMap<>();
-        this.proprietarios = new HashMap<>();
-        new Cliente ("Joao@email.com","joao","password150","Rua da Josefina",10-10-2010,22987,"07/10",123, 23.03f,10.02f);
+        Cliente c = new Cliente ("Joao@email.com","joao","password150","Rua da Josefina",new Date(2000,10,10),22987,"07/10",123, 23.03f,10.02f);
+        Proprietario p = new Proprietario("josefina@email.com","josefina","password123","Rua das Cabeçeiras", new Date(2000,9,10));
+
+        Veiculo v = new Veiculo("00-AA-00", "Fiat", "LaPata", "disel", 10, 10, 330.04f,551.04f);
+        p.setVeiculo(v.getMatricula(),v);
+
+        System.out.println(c.toString());
+        System.out.println(p.toString());
+
     }
     
 }
