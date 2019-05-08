@@ -78,6 +78,10 @@ public class Utilizador {
         this.morada = morada;
     }
 
+    public boolean validaPassword(String pwd){
+        return (this.password.equals(pwd));
+    }
+
     @Override
     public String toString() {
         return  "username='" + username + '\'' + ",\n" +

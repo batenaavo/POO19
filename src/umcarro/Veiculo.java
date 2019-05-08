@@ -11,7 +11,7 @@ public class Veiculo {
     private String matricula;
     private String modelo;
     private String marca;
-    private String combustivel;
+    private String tipo;
     private Integer eficiencia;
     private Integer precoPorKm;
     private Float cordX;
@@ -22,18 +22,18 @@ public class Veiculo {
         this.matricula = null;
         this.modelo = null;
         this.marca = null;
-        this.combustivel = null;
+        this.tipo = null;
         this.eficiencia = null;
         this.precoPorKm = null;
         this.cordX = null;
         this.cordY = null;
     }
 
-    public Veiculo(String matricula, String modelo, String marca, String combustivel, Integer eficiencia, Integer precoPorKm, Float cordX, Float cordY) {
+    public Veiculo(String matricula, String modelo, String marca, String tipo, Integer eficiencia, Integer precoPorKm, Float cordX, Float cordY) {
         this.matricula = matricula;
         this.modelo = modelo;
         this.marca = marca;
-        this.combustivel = combustivel;
+        this.tipo = tipo;
         this.eficiencia = eficiencia;
         this.precoPorKm = precoPorKm;
         this.cordX = cordX;
@@ -44,7 +44,7 @@ public class Veiculo {
         this.matricula = c.getMatricula();
         this.modelo = c.getModelo();
         this.marca = c.getMarca();
-        this.combustivel = c.getCombustivel();
+        this.tipo = c.getTipo();
         this.eficiencia = c.getEficiencia();
         this.precoPorKm = c.getPrecoPorKm();
         this.cordX = c.getCordX();
@@ -76,12 +76,12 @@ public class Veiculo {
         this.marca = marca;
     }
 
-    public String getCombustivel() {
-        return combustivel;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setCombustivel(String combustivel) {
-        this.combustivel = combustivel;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public Integer getEficiencia() {
@@ -122,7 +122,7 @@ public class Veiculo {
                 "matricula='" + matricula + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", marca='" + marca + '\'' +
-                ", combustivel='" + combustivel + '\'' +
+                ", tipo='" + tipo + '\'' +
                 ", eficiencia=" + eficiencia +
                 ", precoPorKm=" + precoPorKm +
                 ", cordX=" + cordX +
