@@ -17,6 +17,7 @@ public class UMCarro {
     private Proprietario proprietario;
     private HashMap<String,Cliente> clientes;
     private HashMap<String,Proprietario> proprietarios;
+    private Veiculos veiculos;
 
     public UMCarro() {
         this.clientes = new HashMap<>();
@@ -41,7 +42,7 @@ public class UMCarro {
         this.proprietario = proprietario;
     }
 
-    public void DataDump(){
+    private void DataDump(){
         Cliente c = new Cliente ("Joao@email.com","joao","password150","Rua da Josefina",new Date(2000,10,10),22987,"07/10",123, 23.03f,10.02f);
         Proprietario p = new Proprietario("josefina@email.com","josefina","password123","Rua das Cabeçeiras", new Date(2000,9,10));
 
@@ -52,7 +53,7 @@ public class UMCarro {
         this.proprietarios.put(p.getUsername(),p);
     }
 
-    public void login(){
+    private void login(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Utilizador(email): ");
         String user = scanner.nextLine();
@@ -71,16 +72,7 @@ public class UMCarro {
 
     }
 
-    private void menuProprietario() {
-        System.out.println("WTFFF");
-    }
-
-    private void menuCliente() {
-        System.out.println("WTFFF");
-
-    }
-
-    public void registo(){
+    private void registo(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Selecione a sua opção:\n" +
                 "1:Cliente\n" +
@@ -127,12 +119,29 @@ public class UMCarro {
         }
     }
 
-    public void carroMaisProximoCliente (){
-        Float xc = this.cliente.getCordX();
-        Float yc = this.cliente.getCordY();
+    private void menuProprietario() {
+        System.out.println("WTFFF");
+    }
 
-        for(Proprietario p : this.proprietarios.values()){
-            float
+    private void menuVeiculos() {
+    }
+
+    private void menuCliente() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Selecione a sua opção\n" +
+                "1: Ver Lista de Veiculos disponíveis. \n" +
+                "2: Ver Veiculo mais próximo. \n" +
+                "3: Ver Veículos com autonomia desejada (km).\n" +
+                "4: Ver Veículos mais alcançáveis a pé.\n" +
+                "5: Ver Veículos com taxa diária mais baratas.\n");
+        String optionSelected = scanner.nextLine();
+        switch (optionSelected) {
+            case "1":
+                menuVeiculos();
+                break;
+            case "2":
+                veiculoMaisProximo(this.clientes.get
+
         }
     }
 
