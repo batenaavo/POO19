@@ -1,6 +1,7 @@
 package umcarro;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Veiculos {
     private ArrayList<Veiculo> veiculos;
@@ -36,5 +37,16 @@ public class Veiculos {
             }
         }
         return aux;
+    }
+
+    public List<String> veiculoComAutonomiaDesejada (Integer x) {
+        int i=0;
+        List<String> ret = new ArrayList<String>();
+        for (Veiculo v: this.veiculos) {
+            if (x <= v.getAutonomia()) {
+                ret.add( (++i) + ":" + " " + v.getMatricula() + " " + v.getModelo() + " " + (v.getAutonomia()) + " " + v.getMatricula());
+            }
+        }
+        return ret;
     }
 }

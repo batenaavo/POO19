@@ -9,6 +9,7 @@ package umcarro;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class UMCarro {
@@ -61,10 +62,10 @@ public class UMCarro {
         String pwd = scanner.nextLine();
 
         if (this.clientes.get(user)!=null && this.clientes.get(user).validaPassword(pwd)) {
-            this.cliente = this.clientes.get(user);
+            cliente = this.clientes.get(user);
             this.menuCliente();
         } else if (this.proprietarios.get(user)!=null && this.proprietarios.get(user).validaPassword(pwd)) {
-            this.proprietario = this.proprietarios.get(user);
+            proprietario = this.proprietarios.get(user);
             this.menuProprietario();
         } else {
             System.out.println("Username e/ou Password Inválidos. ");
@@ -123,7 +124,39 @@ public class UMCarro {
         System.out.println("WTFFF");
     }
 
-    private void menuVeiculos() {
+    private void autonomiaSelector(Veiculos listaVeiculos){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insira o mínimo de autonomia desejado em kms.");
+        Integer autonomia = scanner.nextInt();
+        List<String> aux = veiculos.veiculoComAutonomiaDesejada(autonomia);
+        System.out.print(aux);
+        System.out.println("Indique o número correspondente ao veículo que deseja selecionar: ");
+        String nVeiculo = scanner.nextLine();
+        String carSelected = "";
+        for(String s : aux) {
+            if (nVeiculo.equals(s.split(" ")[0])) {
+                carSelected = s;
+                break;
+            }
+        }
+        System.out.println("Deseja solicitar o carro selecionado? (Y/N)?");
+        String resp = scanner.nextLine();
+        if (resp == "Y" || resp == "y") {
+            System.out.println("Proposta Enviada, aguarde resposta.");
+        } else {
+            autonomiaSelector(listaVeiculos);
+        }
+
+
+
+
+        //TODO
+
+
+    }
+    private void menuVeiculos(){
+
     }
 
     private void menuCliente() {
@@ -140,7 +173,11 @@ public class UMCarro {
                 menuVeiculos();
                 break;
             case "2":
-                veiculoMaisProximo(this.clientes.get
+                this.veiculos.veiculoMaisProximo(this.cliente.getCordX(),this.cliente.getCordY());
+                break;
+            case "3":
+
+
 
         }
     }
