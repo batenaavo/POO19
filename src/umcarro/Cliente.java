@@ -39,4 +39,44 @@ public class Cliente extends Utilizador{
                 ", cordY=" + cordY + "\n" +
                 '}';
     }
+
+    public Integer getnCartaoCred() {
+        return nCartaoCred;
+    }
+
+    public void setnCartaoCred(Integer nCartaoCred) {
+        this.nCartaoCred = nCartaoCred;
+    }
+
+    public String getValidadeCartaoCred() {
+        return validadeCartaoCred;
+    }
+
+    public void setValidadeCartaoCred(String validadeCartaoCred) {
+        this.validadeCartaoCred = validadeCartaoCred;
+    }
+
+    public Integer getCodSeguranca() {
+        return codSeguranca;
+    }
+
+    public void setCodSeguranca(Integer codSeguranca) {
+        this.codSeguranca = codSeguranca;
+    }
+
+    public Float getCordX() {
+        return cordX;
+    }
+
+    public void setCordX(Float cordX) {
+        this.cordX = cordX;
+    }
+
+    public Float getCordY() {
+        return cordY;
+    }
+
+    public void setCordY(Float cordY) {
+        this.cordY = cordY;
+    }
 }

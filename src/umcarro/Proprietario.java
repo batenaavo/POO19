@@ -30,6 +30,8 @@ public class Proprietario extends Utilizador{
         this.historicoArray = new ArrayList<>();
     }
 
+
+
     public HashMap<String, Veiculo> getVeiculos() {
         return veiculos;
     }

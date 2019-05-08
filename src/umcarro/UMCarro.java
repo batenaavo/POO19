@@ -86,34 +86,56 @@ public class UMCarro {
                 "1:Cliente\n" +
                 "2:Proprietário\n");
         String userType = scanner.nextLine();
-        System.out.print("Utilizador(email): ");
-        String user = scanner.nextLine();
-        System.out.print("Password:  ");
-        String pwd = scanner.nextLine();
-        System.out.print("Nome: ");
-        String nome = scanner.nextLine();
-        System.out.print("Morada: ");
-        String morada = scanner.nextLine();
-        System.out.print("Data de Nascimento (mm/dia/ano): ");
-        String dataNasc = scanner.nextLine();
+        if (!userType.equals("1") && !userType.equals("2")){
+            System.out.println("Opção Inválida! ");
+            registo();
+        } else {
+            System.out.print("Utilizador(email): ");
+            String user = scanner.nextLine();
+            System.out.print("Password:  ");
+            String pwd = scanner.nextLine();
+            System.out.print("Nome: ");
+            String nome = scanner.nextLine();
+            System.out.print("Morada: ");
+            String morada = scanner.nextLine();
+            System.out.print("Data de Nascimento (mm/dia/ano): ");
+            String dataNasc = scanner.nextLine();
 
-        if (userType.equals("1")) {
-            System.out.print("Número Cartão de Crédito");
-            Integer nCartaoCred = scanner.nextInt();
-            System.out.print("Validade Cartão de Crédito (mm/yy): ");
-            String validadeCartaoCred = scanner.nextLine();
-            System.out.print("Código Segurança (CCV):  ");
-            Integer codSeguranca = scanner.nextInt();
-            Cliente c = new Cliente(user,nome,pwd,morada,new Date(dataNasc),nCartaoCred,validadeCartaoCred,codSeguranca,0f,0f);
-            if (this.clientes.get(user)== null) {
-                this.clientes.put(user,c);
-                System.out.println("Utilizador registado com sucesso, por favor proceda a login");
+            if (userType.equals("1")) {
+                System.out.print("Número Cartão de Crédito");
+                Integer nCartaoCred = scanner.nextInt();
+                System.out.print("Validade Cartão de Crédito (mm/yy): ");
+                String validadeCartaoCred = scanner.nextLine();
+                System.out.print("Código Segurança (CCV):  ");
+                Integer codSeguranca = scanner.nextInt();
+                Cliente c = new Cliente(user,nome,pwd,morada,new Date(dataNasc),nCartaoCred,validadeCartaoCred,codSeguranca,0f,0f);
+                if (this.clientes.get(user)== null) {
+                    this.clientes.put(user,c);
+                    System.out.println("Utilizador registado com sucesso, por favor proceda a login");
+                } else {
+                    System.out.println("Utilizador já existente! ");
+                }
             } else {
-                System.out.println("Utilizador já existente! ");
+                Proprietario p = new Proprietario(user,nome,pwd,morada,new Date(dataNasc));
+                if (this.proprietarios.get(user)== null) {
+                    this.proprietarios.put(user,p);
+                    System.out.println("Utilizador registado com sucesso, por favor proceda a login");
+                } else {
+                    System.out.println("Utilizador já existente! ");
+                }
             }
-
         }
     }
+
+    public void carroMaisProximoCliente (){
+        Float xc = this.cliente.getCordX();
+        Float yc = this.cliente.getCordY();
+
+        for(Proprietario p : this.proprietarios.values()){
+            float
+        }
+    }
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
