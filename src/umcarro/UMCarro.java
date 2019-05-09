@@ -47,9 +47,10 @@ public class UMCarro {
         Cliente c = new Cliente ("Joao@email.com","joao","password150","Rua da Josefina",new Date(2000,10,10),22987,"07/10",123, 23.03f,10.02f);
         Proprietario p = new Proprietario("josefina@email.com","josefina","password123","Rua das Cabeçeiras", new Date(2000,9,10));
 
-        Veiculo v = new Veiculo("00-AA-00", "Fiat", "LaPata", "disel", 10, 10, 330.04f,551.04f);
+        Veiculo v = new Veiculo("00-AA-00", "Fiat", "LaPata", "diesel",400, 10, 10, 330.04f,551.04f);
         p.setVeiculo(v.getMatricula(),v);
-
+        this.veiculos = new Veiculos();
+        this.veiculos.addVeiculo(v);
         this.clientes.put(c.getUsername(),c);
         this.proprietarios.put(p.getUsername(),p);
     }
@@ -124,8 +125,21 @@ public class UMCarro {
         System.out.println("WTFFF");
     }
 
-    private void autonomiaSelector(Veiculos listaVeiculos){
+    private boolean confirmationSelector(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Confirma a sua seleção? (Y/N)?");
+        String resp = scanner.nextLine();
+        if (resp.equals("Y") || resp.equals("y")) {
+            return true;
+        } else if (resp.equals("N") || resp.equals("n")){
+            return false;
+        } else {
+            System.out.println("Resposta Inválida");
+            return false;
+        }
+    }
 
+    private void autonomiaSelector(Veiculos listaVeiculos){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insira o mínimo de autonomia desejado em kms.");
         Integer autonomia = scanner.nextInt();
@@ -140,21 +154,13 @@ public class UMCarro {
                 break;
             }
         }
-        System.out.println("Deseja solicitar o carro selecionado? (Y/N)?");
-        String resp = scanner.nextLine();
-        if (resp == "Y" || resp == "y") {
-            System.out.println("Proposta Enviada, aguarde resposta.");
+        if (confirmationSelector()) {
+            System.out.println("Pedido enviado, aguarde resposta.");
         } else {
             autonomiaSelector(listaVeiculos);
         }
-
-
-
-
-        //TODO
-
-
     }
+
     private void menuVeiculos(){
 
     }
@@ -170,15 +176,15 @@ public class UMCarro {
         String optionSelected = scanner.nextLine();
         switch (optionSelected) {
             case "1":
-                menuVeiculos();
-                break;
+                menuCliente();
             case "2":
-                this.veiculos.veiculoMaisProximo(this.cliente.getCordX(),this.cliente.getCordY());
+                Veiculo v = this.veiculos.veiculoMaisProximo(this.cliente.getCordX(),this.cliente.getCordY());
+                System.out.println(v.toString());
                 break;
             case "3":
-
-
-
+                autonomiaSelector(veiculos);
+            case "4":
+                break;
         }
     }
 
