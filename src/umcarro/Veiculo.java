@@ -1,84 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package umcarro;
 
 
 public class Veiculo {
 
-    private String matricula;
-    private String modelo;
-    private String marca;
     private String tipo;
+    private String marca;
+    private String matricula;
+    private Integer nif;
+    private Integer velocidadeMedia;
+    private Double precoPorKm;
+    private Double consumoPorKm;
     private Integer autonomia;
-    private Integer eficiencia;
-    private Integer precoPorKm;
     private Float cordX;
     private Float cordY;
 
-
     public Veiculo() {
-        this.matricula = null;
-        this.modelo = null;
-        this.marca = null;
         this.tipo = null;
-        this.autonomia = null;
-        this.eficiencia = null;
+        this.marca = null;
+        this.matricula = null;
+        this.nif = null;
+        this.velocidadeMedia = null;
         this.precoPorKm = null;
+        this.consumoPorKm = null;
+        this.autonomia = null;
         this.cordX = null;
         this.cordY = null;
     }
 
-    public Veiculo(String matricula, String modelo, String marca, String tipo, Integer autonomia, Integer eficiencia, Integer precoPorKm, Float cordX, Float cordY) {
-        this.matricula = matricula;
-        this.modelo = modelo;
-        this.marca = marca;
+    public Veiculo(String tipo, String marca, String matricula, Integer nif, Integer velocidadeMedia, Double precoPorKm, Double consumoPorKm, Integer autonomia, Float cordX, Float cordY) {
         this.tipo = tipo;
-        this.autonomia = autonomia;
-        this.eficiencia = eficiencia;
+        this.marca = marca;
+        this.matricula = matricula;
+        this.nif = nif;
+        this.velocidadeMedia = velocidadeMedia;
         this.precoPorKm = precoPorKm;
+        this.consumoPorKm = consumoPorKm;
+        this.autonomia = autonomia;
         this.cordX = cordX;
         this.cordY = cordY;
-    }
-
-    public Veiculo(Veiculo c){
-        this.matricula = c.getMatricula();
-        this.modelo = c.getModelo();
-        this.marca = c.getMarca();
-        this.tipo = c.getTipo();
-        this.autonomia = c.getAutonomia();
-        this.eficiencia = c.getEficiencia();
-        this.precoPorKm = c.getPrecoPorKm();
-        this.cordX = c.getCordX();
-        this.cordY = c.getCordY();
-
-    }
-
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
     }
 
     public String getTipo() {
@@ -89,28 +48,60 @@ public class Veiculo {
         this.tipo = tipo;
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public Integer getNif() {
+        return nif;
+    }
+
+    public void setNif(Integer nif) {
+        this.nif = nif;
+    }
+
+    public Integer getVelocidadeMedia() {
+        return velocidadeMedia;
+    }
+
+    public void setVelocidadeMedia(Integer velocidadeMedia) {
+        this.velocidadeMedia = velocidadeMedia;
+    }
+
+    public Double getPrecoPorKm() {
+        return precoPorKm;
+    }
+
+    public void setPrecoPorKm(Double precoPorKm) {
+        this.precoPorKm = precoPorKm;
+    }
+
+    public Double getConsumoPorKm() {
+        return consumoPorKm;
+    }
+
+    public void setConsumoPorKm(Double consumoPorKm) {
+        this.consumoPorKm = consumoPorKm;
+    }
+
     public Integer getAutonomia() {
         return autonomia;
     }
 
     public void setAutonomia(Integer autonomia) {
         this.autonomia = autonomia;
-    }
-
-    public Integer getEficiencia() {
-        return eficiencia;
-    }
-
-    public void setEficiencia(Integer eficiencia) {
-        this.eficiencia = eficiencia;
-    }
-
-    public Integer getPrecoPorKm() {
-        return precoPorKm;
-    }
-
-    public void setPrecoPorKm(Integer precoPorKm) {
-        this.precoPorKm = precoPorKm;
     }
 
     public Float getCordX() {
@@ -129,17 +120,17 @@ public class Veiculo {
         this.cordY = cordY;
     }
 
-
     @Override
-    public String toString() {
+    public java.lang.String toString() {
         return "Veiculo{" +
-                "matricula='" + matricula + '\'' +
-                ", modelo='" + modelo + '\'' +
+                "tipo='" + tipo + '\'' +
                 ", marca='" + marca + '\'' +
-                ", tipo='" + tipo + '\'' +
-                ", autonomia'" + autonomia +
-                ", eficiencia=" + eficiencia +
+                ", matricula='" + matricula + '\'' +
+                ", nif=" + nif +
+                ", velocidadeMedia=" + velocidadeMedia +
                 ", precoPorKm=" + precoPorKm +
+                ", consumoPorKm=" + consumoPorKm +
+                ", autonomia=" + autonomia +
                 ", cordX=" + cordX +
                 ", cordY=" + cordY +
                 '}';

@@ -10,25 +10,14 @@ import java.util.Date;
 
 public class Cliente extends Utilizador{
 
-
     private Float cordX;
     private Float cordY;
 
 
-    public Cliente(String username, String nome/*String password*/, String morada, Integer nif,  Float cordX, Float cordY) {
-        super(username, nome, morada, nif);
+    public Cliente(String nome, Integer nif, String username, String morada, Date dataNasc, String password, Float cordX, Float cordY) {
+        super(nome, nif, username, morada, dataNasc, password);
         this.cordX = cordX;
         this.cordY = cordY;
-    }
-
-
-    @Override
-    public String toString() {
-        return  "Cliente{" + "\n" +
-                super.toString() + "\n" +
-                ", cordX=" + cordX + "\n" +
-                ", cordY=" + cordY + "\n" +
-                '}';
     }
 
     public Float getCordX() {
@@ -45,5 +34,14 @@ public class Cliente extends Utilizador{
 
     public void setCordY(Float cordY) {
         this.cordY = cordY;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{ " +
+                super.toString() +
+                " cordX=" + cordX +
+                ", cordY=" + cordY +
+                '}';
     }
 }

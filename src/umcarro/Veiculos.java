@@ -44,7 +44,7 @@ public class Veiculos {
         List<String> ret = new ArrayList<String>();
         for (Veiculo v: this.veiculos) {
             if (x <= v.getAutonomia()) {
-                ret.add( (++i) + ":" + " " + v.getMatricula() + " " + v.getModelo() + " " + (v.getAutonomia()) + " " + v.getMatricula());
+                ret.add( (++i) + ":" + " " + v.getMatricula() + " " + v.getMarca() + " " + (v.getAutonomia()) + " " + v.getPrecoPorKm()+ "€");
             }
         }
         return ret;

@@ -4,37 +4,32 @@
  * and open the template in the editor.
  */
 package umcarro;
+import java.util.Date;
 
 public class Utilizador {
-
-    private String username;
     private String nome;
     private Integer nif;
-    //private String password;
+    private String username;
     private String morada;
+    private Date dataNasc;
+    private String password;
 
-    public Utilizador(String username, String nome/* String password*/, String morada, int nif) {
-        this.username = null;
-        this.nome = null;
-      //  this.password = null;
-        this.morada = null;
-        this.nif = null;
-    }
-
-    public Utilizador(String username, String nome/*, String password*/, String morada, Integer nif) {
-        this.username = username;
+    public Utilizador(String nome, Integer nif, String username, String morada, Date dataNasc, String password) {
         this.nome = nome;
-        //this.password = password;
-        this.morada = morada;
         this.nif = nif;
+        this.username = username;
+        this.morada = morada;
+        this.dataNasc = dataNasc;
+        this.password = password;
     }
 
     public Utilizador(Utilizador c){
-        this.username = c.getUsername();
         this.nome = c.getNome();
-      /*  this.password = c.getPassword(); */
+        this.nif = c.getNif();
+        this.username = c.getUsername();
         this.morada = c.getMorada();
-        this.nif = c.getnif();
+        this.dataNasc = c.getDataNasc();
+        this.password = c.getPassword();
     }
 
     public String getUsername() {
@@ -53,15 +48,14 @@ public class Utilizador {
         this.nome = nome;
     }
 
-    public Integer getnif() {
-        return nif;
+    public Date getDataNasc() {
+        return dataNasc;
     }
 
-    public void setnif(Integer nif) {
-        this.nif = nif;
+    public void setDataNasc(Date dataNasc) {
+        this.dataNasc = dataNasc;
     }
 
-    /*
     public String getPassword() {
         return password;
     }
@@ -69,7 +63,7 @@ public class Utilizador {
     public void setPassword(String password) {
         this.password = password;
     }
-*/
+
     public String getMorada() {
         return morada;
     }
@@ -78,17 +72,28 @@ public class Utilizador {
         this.morada = morada;
     }
 
-    /*
+    public Integer getNif() {
+        return nif;
+    }
+
+    public void setNif(Integer nif) {
+        this.nif = nif;
+    }
+
     public boolean validaPassword(String pwd){
         return (this.password.equals(pwd));
     }
-*/
+
     @Override
     public String toString() {
-        return  "username='" + username + '\'' + ",\n" +
-                "nome='" + nome + '\'' + ",\n" +
-                "nif=" + nif + ",\n" +
-                "morada='" + morada + '\'';
+        return "Utilizador{" +
+                "nome='" + nome + '\'' +
+                ", nif=" + nif +
+                ", username='" + username + '\'' +
+                ", morada='" + morada + '\'' +
+                ", dataNasc=" + dataNasc +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
 

@@ -7,31 +7,30 @@ package umcarro;
 
 
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.*;
 
 public class UMCarro {
 
     private Cliente cliente;
     private Proprietario proprietario;
-    private HashMap<String,Cliente> clientes;
-    private HashMap<String,Proprietario> proprietarios;
+    private HashMap<Integer,Cliente> clientes;
+    private Proprietarios proprietarios;
     private Veiculos veiculos;
 
     public UMCarro() {
         this.clientes = new HashMap<>();
-        this.proprietarios = new HashMap<>();
+        this.proprietarios = new Proprietarios();
         this.cliente = null;
         this.proprietario = null;
     }
 
-    public HashMap<String, Cliente> getClientes() {
+    public HashMap<Integer, Cliente> getClientes() {
         return clientes;
     }
 
-    public HashMap<String, Proprietario> getProprietarios() {
+    public Proprietarios getProprietarios() {
         return proprietarios;
     }
 
@@ -44,10 +43,36 @@ public class UMCarro {
     }
 
     private void DataDump(){
-        Cliente c = new Cliente ("Joao@email.com","joao","password150","Rua da Josefina",333444,22987,"07/10",123, 23.03f,10.02f);
-        Proprietario p = new Proprietario("josefina@email.com","josefina","password123","Rua das Cabeçeiras", 343434);
+        try{
+            FileReader fr = new FileReader("input.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            while((line = br.readLine())!=null) {
+                String[] aux = line.split(":");
+                String[] toAdd = aux[1].split(",");
+                switch (aux[0]){
+                    case "NovoProp":
+                        Proprietario p = new Proprietario(toAdd[0],Integer.parseInt(toAdd[1]),toAdd[2],toAdd[3],new Date(1994,12,16),"pass");
+                        this.proprietarios.addProprietario(p);
+                        break;
+                    case "NovoCliente":
+                        Cliente c = new Cliente(toAdd[0],Integer.parseInt(toAdd[1]),toAdd[2],toAdd[3],new Date(1994,12,16),"pass",Float.parseFloat(toAdd[4]),Float.parseFloat(toAdd[5]));
+                        this.clientes.put(Integer.parseInt(toAdd[1]),c);
+                        break;
+                    case "NovoCarro":
+                        Veiculo v = new Veiculo();
+                }
+            }
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+            // TODO: handle exception
+        }
 
-        Veiculo v = new Veiculo("00-AA-00", "Fiat", "LaPata", "diesel",400, 10, 10, 330.04f,551.04f);
+
+
+
+        Veiculo v = new Veiculo("diesel","Fiat","00-AA-00",123123123,60,0.50, 0.50, 800, 0f , 0f);
         p.setVeiculo(v.getMatricula(),v);
         this.veiculos = new Veiculos();
         this.veiculos.addVeiculo(v);
@@ -84,23 +109,25 @@ public class UMCarro {
             System.out.println("Opção Inválida! ");
             registo();
         } else {
-            System.out.print("Nome ");
-            String nome = scanner.nextLine();
-            /*System.out.print("Password:  ");
-            String pwd = scanner.nextLine();*/
-            System.out.print("Email: ");
+            System.out.print("Utilizador(email): ");
             String user = scanner.nextLine();
+            System.out.print("Password:  ");
+            String pwd = scanner.nextLine();
+            System.out.print("Nome: ");
+            String nome = scanner.nextLine();
             System.out.print("Morada: ");
             String morada = scanner.nextLine();
-            System.out.print("Número de Identificação Fiscal ");
-            Integer nif = scanner.nextInt();
+            System.out.print("Data de Nascimento (mm/dia/ano): ");
+            String dataNasc = scanner.nextLine();
 
             if (userType.equals("1")) {
-                System.out.print("Localização X:");
-                Float cx = scanner.nextFloat();
-                System.out.print("Localização Y;");
-                Float cy = scanner.nextFloat();
-                Cliente c = new Cliente(user,nome,morada,nif,cx,cy);
+                System.out.print("Número Cartão de Crédito");
+                Integer nCartaoCred = scanner.nextInt();
+                System.out.print("Validade Cartão de Crédito (mm/yy): ");
+                String validadeCartaoCred = scanner.nextLine();
+                System.out.print("Código Segurança (CCV):  ");
+                Integer codSeguranca = scanner.nextInt();
+                Cliente c = new Cliente(user,nome,pwd,morada,new Date(dataNasc),nCartaoCred,validadeCartaoCred,codSeguranca,0f,0f);
                 if (this.clientes.get(user)== null) {
                     this.clientes.put(user,c);
                     System.out.println("Utilizador registado com sucesso, por favor proceda a login");
@@ -108,7 +135,7 @@ public class UMCarro {
                     System.out.println("Utilizador já existente! ");
                 }
             } else {
-                Proprietario p = new Proprietario(user,nome,morada,nif);
+                Proprietario p = new Proprietario(user,nome,pwd,morada,new Date(dataNasc));
                 if (this.proprietarios.get(user)== null) {
                     this.proprietarios.put(user,p);
                     System.out.println("Utilizador registado com sucesso, por favor proceda a login");
