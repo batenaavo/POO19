@@ -6,7 +6,6 @@
 package umcarro;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
 
@@ -16,15 +15,15 @@ public class Proprietario extends Utilizador{
     private Integer userRating;
     private ArrayList<Historico> historicoArray;
 
-    public Proprietario(String username, String nome, String password, String address, Date dataNasc, HashMap<String,Veiculo> veiculos, Integer userRating, ArrayList<Historico> historicoArray) {
-        super(username, nome, password, address, dataNasc);
+    public Proprietario(String username, String nome /*String password*/, String morada, Integer nif, HashMap<String,Veiculo> veiculos, Integer userRating, ArrayList<Historico> historicoArray) {
+        super(username, nome, morada, nif);
         this.veiculos = veiculos;
         this.userRating = userRating;
         this.historicoArray = historicoArray;
     }
 
-    public Proprietario(String username, String nome, String password, String address, Date dataNasc) {
-        super(username, nome, password, address, dataNasc);
+    public Proprietario(String username, String nome, String morada, Integer nif) {
+        super(username, nome, morada, nif);
         this.veiculos = new HashMap<>();
         this.userRating = 0;
         this.historicoArray = new ArrayList<>();

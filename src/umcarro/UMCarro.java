@@ -9,6 +9,7 @@ package umcarro;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class UMCarro {
@@ -43,12 +44,13 @@ public class UMCarro {
     }
 
     private void DataDump(){
-        Cliente c = new Cliente ("Joao@email.com","joao","password150","Rua da Josefina",new Date(2000,10,10),22987,"07/10",123, 23.03f,10.02f);
-        Proprietario p = new Proprietario("josefina@email.com","josefina","password123","Rua das Cabeçeiras", new Date(2000,9,10));
+        Cliente c = new Cliente ("Joao@email.com","joao","password150","Rua da Josefina",333444,22987,"07/10",123, 23.03f,10.02f);
+        Proprietario p = new Proprietario("josefina@email.com","josefina","password123","Rua das Cabeçeiras", 343434);
 
-        Veiculo v = new Veiculo("00-AA-00", "Fiat", "LaPata", "disel", 10, 10, 330.04f,551.04f);
+        Veiculo v = new Veiculo("00-AA-00", "Fiat", "LaPata", "diesel",400, 10, 10, 330.04f,551.04f);
         p.setVeiculo(v.getMatricula(),v);
-
+        this.veiculos = new Veiculos();
+        this.veiculos.addVeiculo(v);
         this.clientes.put(c.getUsername(),c);
         this.proprietarios.put(p.getUsername(),p);
     }
@@ -61,10 +63,10 @@ public class UMCarro {
         String pwd = scanner.nextLine();
 
         if (this.clientes.get(user)!=null && this.clientes.get(user).validaPassword(pwd)) {
-            this.cliente = this.clientes.get(user);
+            cliente = this.clientes.get(user);
             this.menuCliente();
         } else if (this.proprietarios.get(user)!=null && this.proprietarios.get(user).validaPassword(pwd)) {
-            this.proprietario = this.proprietarios.get(user);
+            proprietario = this.proprietarios.get(user);
             this.menuProprietario();
         } else {
             System.out.println("Username e/ou Password Inválidos. ");
@@ -82,25 +84,23 @@ public class UMCarro {
             System.out.println("Opção Inválida! ");
             registo();
         } else {
-            System.out.print("Utilizador(email): ");
-            String user = scanner.nextLine();
-            System.out.print("Password:  ");
-            String pwd = scanner.nextLine();
-            System.out.print("Nome: ");
+            System.out.print("Nome ");
             String nome = scanner.nextLine();
+            /*System.out.print("Password:  ");
+            String pwd = scanner.nextLine();*/
+            System.out.print("Email: ");
+            String user = scanner.nextLine();
             System.out.print("Morada: ");
             String morada = scanner.nextLine();
-            System.out.print("Data de Nascimento (mm/dia/ano): ");
-            String dataNasc = scanner.nextLine();
+            System.out.print("Número de Identificação Fiscal ");
+            Integer nif = scanner.nextInt();
 
             if (userType.equals("1")) {
-                System.out.print("Número Cartão de Crédito");
-                Integer nCartaoCred = scanner.nextInt();
-                System.out.print("Validade Cartão de Crédito (mm/yy): ");
-                String validadeCartaoCred = scanner.nextLine();
-                System.out.print("Código Segurança (CCV):  ");
-                Integer codSeguranca = scanner.nextInt();
-                Cliente c = new Cliente(user,nome,pwd,morada,new Date(dataNasc),nCartaoCred,validadeCartaoCred,codSeguranca,0f,0f);
+                System.out.print("Localização X:");
+                Float cx = scanner.nextFloat();
+                System.out.print("Localização Y;");
+                Float cy = scanner.nextFloat();
+                Cliente c = new Cliente(user,nome,morada,nif,cx,cy);
                 if (this.clientes.get(user)== null) {
                     this.clientes.put(user,c);
                     System.out.println("Utilizador registado com sucesso, por favor proceda a login");
@@ -108,7 +108,7 @@ public class UMCarro {
                     System.out.println("Utilizador já existente! ");
                 }
             } else {
-                Proprietario p = new Proprietario(user,nome,pwd,morada,new Date(dataNasc));
+                Proprietario p = new Proprietario(user,nome,morada,nif);
                 if (this.proprietarios.get(user)== null) {
                     this.proprietarios.put(user,p);
                     System.out.println("Utilizador registado com sucesso, por favor proceda a login");
@@ -123,7 +123,44 @@ public class UMCarro {
         System.out.println("WTFFF");
     }
 
-    private void menuVeiculos() {
+    private boolean confirmationSelector(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Confirma a sua seleção? (Y/N)?");
+        String resp = scanner.nextLine();
+        if (resp.equals("Y") || resp.equals("y")) {
+            return true;
+        } else if (resp.equals("N") || resp.equals("n")){
+            return false;
+        } else {
+            System.out.println("Resposta Inválida");
+            return false;
+        }
+    }
+
+    private void autonomiaSelector(Veiculos listaVeiculos){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insira o mínimo de autonomia desejado em kms.");
+        Integer autonomia = scanner.nextInt();
+        List<String> aux = veiculos.veiculoComAutonomiaDesejada(autonomia);
+        System.out.print(aux);
+        System.out.println("Indique o número correspondente ao veículo que deseja selecionar: ");
+        String nVeiculo = scanner.nextLine();
+        String carSelected = "";
+        for(String s : aux) {
+            if (nVeiculo.equals(s.split(" ")[0])) {
+                carSelected = s;
+                break;
+            }
+        }
+        if (confirmationSelector()) {
+            System.out.println("Pedido enviado, aguarde resposta.");
+        } else {
+            autonomiaSelector(listaVeiculos);
+        }
+    }
+
+    private void menuVeiculos(){
+
     }
 
     private void menuCliente() {
@@ -137,11 +174,15 @@ public class UMCarro {
         String optionSelected = scanner.nextLine();
         switch (optionSelected) {
             case "1":
-                menuVeiculos();
-                break;
+                menuCliente();
             case "2":
-                veiculoMaisProximo(this.clientes.get
-
+                Veiculo v = this.veiculos.veiculoMaisProximo(this.cliente.getCordX(),this.cliente.getCordY());
+                System.out.println(v.toString());
+                break;
+            case "3":
+                autonomiaSelector(veiculos);
+            case "4":
+                break;
         }
     }
 

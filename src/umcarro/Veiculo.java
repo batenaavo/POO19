@@ -12,6 +12,7 @@ public class Veiculo {
     private String modelo;
     private String marca;
     private String tipo;
+    private Integer autonomia;
     private Integer eficiencia;
     private Integer precoPorKm;
     private Float cordX;
@@ -23,17 +24,19 @@ public class Veiculo {
         this.modelo = null;
         this.marca = null;
         this.tipo = null;
+        this.autonomia = null;
         this.eficiencia = null;
         this.precoPorKm = null;
         this.cordX = null;
         this.cordY = null;
     }
 
-    public Veiculo(String matricula, String modelo, String marca, String tipo, Integer eficiencia, Integer precoPorKm, Float cordX, Float cordY) {
+    public Veiculo(String matricula, String modelo, String marca, String tipo, Integer autonomia, Integer eficiencia, Integer precoPorKm, Float cordX, Float cordY) {
         this.matricula = matricula;
         this.modelo = modelo;
         this.marca = marca;
         this.tipo = tipo;
+        this.autonomia = autonomia;
         this.eficiencia = eficiencia;
         this.precoPorKm = precoPorKm;
         this.cordX = cordX;
@@ -45,12 +48,14 @@ public class Veiculo {
         this.modelo = c.getModelo();
         this.marca = c.getMarca();
         this.tipo = c.getTipo();
+        this.autonomia = c.getAutonomia();
         this.eficiencia = c.getEficiencia();
         this.precoPorKm = c.getPrecoPorKm();
         this.cordX = c.getCordX();
         this.cordY = c.getCordY();
 
     }
+
 
     public String getMatricula() {
         return matricula;
@@ -82,6 +87,14 @@ public class Veiculo {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public Integer getAutonomia() {
+        return autonomia;
+    }
+
+    public void setAutonomia(Integer autonomia) {
+        this.autonomia = autonomia;
     }
 
     public Integer getEficiencia() {
@@ -116,6 +129,7 @@ public class Veiculo {
         this.cordY = cordY;
     }
 
+
     @Override
     public String toString() {
         return "Veiculo{" +
@@ -123,6 +137,7 @@ public class Veiculo {
                 ", modelo='" + modelo + '\'' +
                 ", marca='" + marca + '\'' +
                 ", tipo='" + tipo + '\'' +
+                ", autonomia'" + autonomia +
                 ", eficiencia=" + eficiencia +
                 ", precoPorKm=" + precoPorKm +
                 ", cordX=" + cordX +
