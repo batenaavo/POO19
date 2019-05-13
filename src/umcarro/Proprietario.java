@@ -32,6 +32,7 @@ public class Proprietario extends Utilizador{
 
 
 
+
     public HashMap<String, Veiculo> getVeiculos() {
         return veiculos;
     }

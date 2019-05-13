@@ -60,7 +60,9 @@ public class UMCarro {
                         this.clientes.put(Integer.parseInt(toAdd[1]),c);
                         break;
                     case "NovoCarro":
-                        Veiculo v = new Veiculo();
+                        Veiculo v = new Veiculo(toAdd[0],toAdd[1],toAdd[2],Integer.parseInt(toAdd[3]),
+                                Integer.parseInt(toAdd[4]),Double.parseDouble(toAdd[5]),Double.parseDouble(toAdd[6]),
+                                Integer.parseInt(toAdd[7]),Float.parseFloat(toAdd[8]),Float.parseFloat(toAdd[9]));
                 }
             }
         } catch (Exception e)
@@ -113,6 +115,8 @@ public class UMCarro {
             String user = scanner.nextLine();
             System.out.print("Password:  ");
             String pwd = scanner.nextLine();
+            System.out.print("Número de Idenficação Fiscal");
+            Integer nif = scanner.nextInt();
             System.out.print("Nome: ");
             String nome = scanner.nextLine();
             System.out.print("Morada: ");
@@ -121,13 +125,12 @@ public class UMCarro {
             String dataNasc = scanner.nextLine();
 
             if (userType.equals("1")) {
-                System.out.print("Número Cartão de Crédito");
-                Integer nCartaoCred = scanner.nextInt();
-                System.out.print("Validade Cartão de Crédito (mm/yy): ");
-                String validadeCartaoCred = scanner.nextLine();
-                System.out.print("Código Segurança (CCV):  ");
-                Integer codSeguranca = scanner.nextInt();
-                Cliente c = new Cliente(user,nome,pwd,morada,new Date(dataNasc),nCartaoCred,validadeCartaoCred,codSeguranca,0f,0f);
+                System.out.print("Localização X");
+                Float cordX = scanner.nextFloat();
+                System.out.print("Localização Y");
+                Float cordY = scanner.nextFloat();
+                Cliente c = new Cliente(nome,nif,user,morada,new Date(dataNasc),pwd,
+                        0f,0f);
                 if (this.clientes.get(user)== null) {
                     this.clientes.put(user,c);
                     System.out.println("Utilizador registado com sucesso, por favor proceda a login");
@@ -135,7 +138,7 @@ public class UMCarro {
                     System.out.println("Utilizador já existente! ");
                 }
             } else {
-                Proprietario p = new Proprietario(user,nome,pwd,morada,new Date(dataNasc));
+                Proprietario p = new Proprietario(nome,nif,user,morada,new Date(dataNasc),pwd);
                 if (this.proprietarios.get(user)== null) {
                     this.proprietarios.put(user,p);
                     System.out.println("Utilizador registado com sucesso, por favor proceda a login");
@@ -145,10 +148,53 @@ public class UMCarro {
             }
         }
     }
+    private void menuCliente() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Selecione a sua opção\n" +
+                "1: Ver Lista de Veiculos disponíveis. \n" +
+                "2: Ver Veiculo mais próximo. \n" +
+                "3: Ver Veículos com autonomia desejada (km).\n" +
+                "4: Ver Veículos mais alcançáveis a pé.\n" +
+                "5: Ver Veículos com taxa diária mais baratas.\n");
+        String optionSelected = scanner.nextLine();
+        switch (optionSelected) {
+            case "1":
+                menuCliente();
+            case "2":
+                Veiculo v = this.veiculos.veiculoMaisProximo(this.cliente.getCordX(),this.cliente.getCordY());
+                System.out.println(v.toString());
+                break;
+            case "3":
+                autonomiaSelector(veiculos);
+            case "4":
+                break;
+        }
+    }
 
     private void menuProprietario() {
-        System.out.println("WTFFF");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Selecione a sua opção\n" +
+                "1: Abastecer Carro(alterar autonomia). \n" +
+                "2: Sinalizar Veículo Disponível. \n" +
+                "3: Alterar preço por km de Veículo. (km).\n" +
+                "4: Ver propostas de cliente.\n" +
+                "5: Registar quanto custou a viagem.\n");
+        String optionSelected = scanner.nextLine();
+        switch(optionSelected){
+            case "1":
+                menuCliente();
+            case "2":
+
+        }
     }
+
+
+    private void alterarAutonomia() {
+
+    }
+
+
+
 
     private boolean confirmationSelector(){
         Scanner scanner = new Scanner(System.in);
@@ -190,28 +236,6 @@ public class UMCarro {
 
     }
 
-    private void menuCliente() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Selecione a sua opção\n" +
-                "1: Ver Lista de Veiculos disponíveis. \n" +
-                "2: Ver Veiculo mais próximo. \n" +
-                "3: Ver Veículos com autonomia desejada (km).\n" +
-                "4: Ver Veículos mais alcançáveis a pé.\n" +
-                "5: Ver Veículos com taxa diária mais baratas.\n");
-        String optionSelected = scanner.nextLine();
-        switch (optionSelected) {
-            case "1":
-                menuCliente();
-            case "2":
-                Veiculo v = this.veiculos.veiculoMaisProximo(this.cliente.getCordX(),this.cliente.getCordY());
-                System.out.println(v.toString());
-                break;
-            case "3":
-                autonomiaSelector(veiculos);
-            case "4":
-                break;
-        }
-    }
 
 
     public static void main(String[] args) {
