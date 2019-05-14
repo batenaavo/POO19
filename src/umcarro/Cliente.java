@@ -6,35 +6,38 @@
 package umcarro;
 
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Cliente extends Utilizador{
 
-    private Float cordX;
-    private Float cordY;
+    private Double cordX;
+    private Double cordY;
 
 
-    public Cliente(String nome, Integer nif, String username, String morada, Date dataNasc, String password, Float cordX, Float cordY) {
+    public Cliente(String nome, Integer nif, String username, String morada, Date dataNasc, String password, Double cordX, Double cordY) {
         super(nome, nif, username, morada, dataNasc, password);
         this.cordX = cordX;
         this.cordY = cordY;
     }
 
-    public Float getCordX() {
+    public Double getCordX() {
         return cordX;
     }
 
-    public void setCordX(Float cordX) {
+    public void setCordX(Double cordX) {
         this.cordX = cordX;
     }
 
-    public Float getCordY() {
+    public Double getCordY() {
         return cordY;
     }
 
-    public void setCordY(Float cordY) {
+    public void setCordY(Double cordY) {
         this.cordY = cordY;
     }
+
 
     @Override
     public String toString() {

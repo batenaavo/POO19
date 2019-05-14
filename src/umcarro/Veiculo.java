@@ -11,8 +11,8 @@ public class Veiculo {
     private Double precoPorKm;
     private Double consumoPorKm;
     private Integer autonomia;
-    private Float cordX;
-    private Float cordY;
+    private Double cordX;
+    private Double cordY;
 
     public Veiculo() {
         this.tipo = null;
@@ -27,7 +27,7 @@ public class Veiculo {
         this.cordY = null;
     }
 
-    public Veiculo(String tipo, String marca, String matricula, Integer nif, Integer velocidadeMedia, Double precoPorKm, Double consumoPorKm, Integer autonomia, Float cordX, Float cordY) {
+    public Veiculo(String tipo, String marca, String matricula, Integer nif, Integer velocidadeMedia, Double precoPorKm, Double consumoPorKm, Integer autonomia, Double cordX, Double cordY) {
         this.tipo = tipo;
         this.marca = marca;
         this.matricula = matricula;
@@ -104,19 +104,19 @@ public class Veiculo {
         this.autonomia = autonomia;
     }
 
-    public Float getCordX() {
+    public Double getCordX() {
         return cordX;
     }
 
-    public void setCordX(Float cordX) {
+    public void setCordX(Double cordX) {
         this.cordX = cordX;
     }
 
-    public Float getCordY() {
+    public Double getCordY() {
         return cordY;
     }
 
-    public void setCordY(Float cordY) {
+    public void setCordY(Double cordY) {
         this.cordY = cordY;
     }
 

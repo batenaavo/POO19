@@ -13,6 +13,8 @@ public class Utilizador {
     private String morada;
     private Date dataNasc;
     private String password;
+    private Double rating;
+    private Integer ratingCounter;
 
     public Utilizador(String nome, Integer nif, String username, String morada, Date dataNasc, String password) {
         this.nome = nome;
@@ -21,15 +23,23 @@ public class Utilizador {
         this.morada = morada;
         this.dataNasc = dataNasc;
         this.password = password;
+        this.rating = 100.00;
+        this.ratingCounter = 0;
     }
 
-    public Utilizador(Utilizador c){
+    public Utilizador(Utilizador c) {
         this.nome = c.getNome();
         this.nif = c.getNif();
         this.username = c.getUsername();
         this.morada = c.getMorada();
         this.dataNasc = c.getDataNasc();
         this.password = c.getPassword();
+        this.rating = c.getRating();
+        this.ratingCounter = c.getRatingCounter();
+    }
+
+    public void addRating (Double rating){
+        this.rating = ((this.rating*this.ratingCounter) + rating)/(++this.ratingCounter);
     }
 
     public String getUsername() {
@@ -80,7 +90,23 @@ public class Utilizador {
         this.nif = nif;
     }
 
-    public boolean validaPassword(String pwd){
+    public Double getRating() {
+        return rating;
+    }
+
+    public void setRating(Double rating) {
+        this.rating = rating;
+    }
+
+    public Integer getRatingCounter() {
+        return ratingCounter;
+    }
+
+    public void setRatingCounter(Integer ratingCounter) {
+        this.ratingCounter = ratingCounter;
+    }
+
+    public boolean validaPassword(String pwd) {
         return (this.password.equals(pwd));
     }
 
@@ -93,8 +119,8 @@ public class Utilizador {
                 ", morada='" + morada + '\'' +
                 ", dataNasc=" + dataNasc +
                 ", password='" + password + '\'' +
+                ", rating=" + rating +
                 '}';
     }
 }
-
 

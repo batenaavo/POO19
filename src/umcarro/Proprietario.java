@@ -13,21 +13,13 @@ import java.util.HashMap;
 public class Proprietario extends Utilizador{
 
     private HashMap<String,Veiculo> veiculos;
-    private Integer userRating;
-    private ArrayList<Historico> historicoArray;
+    private ArrayList<Pedidos> pedidosArray;
 
-    public Proprietario(String nome, Integer nif, String username, String morada, Date dataNasc, String password, HashMap<String,Veiculo> veiculos, Integer userRating, ArrayList<Historico> historicoArray) {
-        super(nome, nif, username, morada, dataNasc, password);
-        this.veiculos = veiculos;
-        this.userRating = userRating;
-        this.historicoArray = historicoArray;
-    }
 
     public Proprietario(String nome, Integer nif, String username, String morada, Date dataNasc, String password) {
         super(nome, nif, username, morada, dataNasc, password);
         this.veiculos = new HashMap<>();
-        this.userRating = 0;
-        this.historicoArray = new ArrayList<>();
+        this.pedidosArray = new ArrayList<>();
     }
 
 
@@ -41,20 +33,12 @@ public class Proprietario extends Utilizador{
         this.veiculos = veiculos;
     }
 
-    public Integer getUserRating() {
-        return userRating;
+    public ArrayList<Pedidos> getPedidosArray() {
+        return pedidosArray;
     }
 
-    public void setUserRating(Integer userRating) {
-        this.userRating = userRating;
-    }
-
-    public ArrayList<Historico> getHistoricoArray() {
-        return historicoArray;
-    }
-
-    public void setHistoricoArray(ArrayList<Historico> historicoArray) {
-        this.historicoArray = historicoArray;
+    public void setPedidosArray(ArrayList<Pedidos> pedidosArray) {
+        this.pedidosArray = pedidosArray;
     }
 
     public void setVeiculo(String matricula, Veiculo veiculos) {
@@ -69,14 +53,13 @@ public class Proprietario extends Utilizador{
         }
 
         String historico = "";
-        for(Historico h: this.historicoArray) {
+        for(Pedidos h: this.pedidosArray) {
             historico += h.toString() + "\n\t\t";
         }
 
         return "Proprietario {" + "\n" +
                 super.toString() + "\n" +
                 "Veiculos: \n\t\t" + veiculos +
-                "rating: " + this.userRating + "\n" +
                 "historico: \n\t\t" + historico +
                 "}";
     }

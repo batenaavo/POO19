@@ -15,36 +15,23 @@ public class UMCarro {
 
     private Cliente cliente;
     private Proprietario proprietario;
-    private HashMap<Integer,Cliente> clientes;
+    private Clientes clientes;
     private Proprietarios proprietarios;
     private Veiculos veiculos;
+    private Pedidos pedidos;
 
     public UMCarro() {
-        this.clientes = new HashMap<>();
         this.proprietarios = new Proprietarios();
-        this.cliente = null;
-        this.proprietario = null;
+        this.clientes = new Clientes();
+        this.pedidos = new Pedidos();
+        this.veiculos = new Veiculos();
     }
 
-    public HashMap<Integer, Cliente> getClientes() {
-        return clientes;
-    }
-
-    public Proprietarios getProprietarios() {
-        return proprietarios;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
-    public void setProprietario(Proprietario proprietario) {
-        this.proprietario = proprietario;
-    }
 
     private void DataDump(){
         try{
-            FileReader fr = new FileReader("input.txt");
+            FileReader fr = new FileReader("C:\\Users\\Teste 1\\Documents\\GitHub\\poo2019\\POO19\\src\\umcarro" +
+                    "\\input.txt");
             BufferedReader br = new BufferedReader(fr);
             String line;
             while((line = br.readLine())!=null) {
@@ -52,17 +39,36 @@ public class UMCarro {
                 String[] toAdd = aux[1].split(",");
                 switch (aux[0]){
                     case "NovoProp":
-                        Proprietario p = new Proprietario(toAdd[0],Integer.parseInt(toAdd[1]),toAdd[2],toAdd[3],new Date(1994,12,16),"pass");
+                        Proprietario p = new Proprietario(toAdd[0],Integer.parseInt(toAdd[1]),toAdd[2],toAdd[3],
+                                new Date(1994,12,16),"pass");
                         this.proprietarios.addProprietario(p);
                         break;
                     case "NovoCliente":
-                        Cliente c = new Cliente(toAdd[0],Integer.parseInt(toAdd[1]),toAdd[2],toAdd[3],new Date(1994,12,16),"pass",Float.parseFloat(toAdd[4]),Float.parseFloat(toAdd[5]));
-                        this.clientes.put(Integer.parseInt(toAdd[1]),c);
+                        Cliente c = new Cliente(toAdd[0],Integer.parseInt(toAdd[1]),toAdd[2],toAdd[3],new Date(1994,
+                                12,16),"pass",Double.parseDouble(toAdd[4]),Double.parseDouble(toAdd[5]));
+                        this.clientes.addCliente(c);
                         break;
                     case "NovoCarro":
                         Veiculo v = new Veiculo(toAdd[0],toAdd[1],toAdd[2],Integer.parseInt(toAdd[3]),
                                 Integer.parseInt(toAdd[4]),Double.parseDouble(toAdd[5]),Double.parseDouble(toAdd[6]),
-                                Integer.parseInt(toAdd[7]),Float.parseFloat(toAdd[8]),Float.parseFloat(toAdd[9]));
+                                Integer.parseInt(toAdd[7]),Double.parseDouble(toAdd[8]),Double.parseDouble(toAdd[9]));
+                       this.veiculos.addVeiculo(v);
+                        break;
+                    case "Aluguer":
+                         Pedido a = new Pedido(Integer.parseInt(toAdd[0]),Double.parseDouble(toAdd[1]),
+                                 Double.parseDouble(toAdd[2]),toAdd[3],toAdd[4]);
+                         break;
+                    case "Classificar":
+                        if (toAdd[0].length() > 8){
+                            this.clientes.addRating(Integer.parseInt(toAdd[0]),Double.parseDouble(toAdd[1]));
+                            this.proprietarios.addRating(Integer.parseInt(toAdd[0]),Double.parseDouble(toAdd[1]));
+                        } else {
+                            Veiculo g = this.veiculos.getVeiculoByMatricula(toAdd[0]);
+                            this.proprietarios.addRating(g.getNif(),Double.parseDouble(toAdd[1]));
+                            /* mudar rating de proprietarios para carros.*/
+                        }
+                        break;
+
                 }
             }
         } catch (Exception e)
@@ -71,15 +77,6 @@ public class UMCarro {
             // TODO: handle exception
         }
 
-
-
-
-        Veiculo v = new Veiculo("diesel","Fiat","00-AA-00",123123123,60,0.50, 0.50, 800, 0f , 0f);
-        p.setVeiculo(v.getMatricula(),v);
-        this.veiculos = new Veiculos();
-        this.veiculos.addVeiculo(v);
-        this.clientes.put(c.getUsername(),c);
-        this.proprietarios.put(p.getUsername(),p);
     }
 
     private void login(){
@@ -89,11 +86,11 @@ public class UMCarro {
         System.out.print("Password:  ");
         String pwd = scanner.nextLine();
 
-        if (this.clientes.get(user)!=null && this.clientes.get(user).validaPassword(pwd)) {
-            cliente = this.clientes.get(user);
+        if (this.clientes.getClienteByUser(user)!=null && this.clientes.getClienteByUser(user).validaPassword(pwd)) {
+            cliente = this.clientes.getClienteByUser(user);
             this.menuCliente();
-        } else if (this.proprietarios.get(user)!=null && this.proprietarios.get(user).validaPassword(pwd)) {
-            proprietario = this.proprietarios.get(user);
+        } else if (this.proprietarios.getProprietariosByUser(user)!=null && this.proprietarios.getProprietariosByUser(user).validaPassword(pwd)) {
+            proprietario = this.proprietarios.getProprietariosByUser(user);
             this.menuProprietario();
         } else {
             System.out.println("Username e/ou Password Inválidos. ");
@@ -126,21 +123,20 @@ public class UMCarro {
 
             if (userType.equals("1")) {
                 System.out.print("Localização X");
-                Float cordX = scanner.nextFloat();
+                Double cordX = scanner.nextDouble();
                 System.out.print("Localização Y");
-                Float cordY = scanner.nextFloat();
-                Cliente c = new Cliente(nome,nif,user,morada,new Date(dataNasc),pwd,
-                        0f,0f);
-                if (this.clientes.get(user)== null) {
-                    this.clientes.put(user,c);
+                Double cordY = scanner.nextDouble();
+                Cliente c = new Cliente(nome,nif,user,morada,new Date(dataNasc),pwd, cordX, cordY);
+                if (this.clientes.getClienteByUser(user)== null) {
+                    this.clientes.addCliente(c);
                     System.out.println("Utilizador registado com sucesso, por favor proceda a login");
                 } else {
                     System.out.println("Utilizador já existente! ");
                 }
             } else {
                 Proprietario p = new Proprietario(nome,nif,user,morada,new Date(dataNasc),pwd);
-                if (this.proprietarios.get(user)== null) {
-                    this.proprietarios.put(user,p);
+                if (this.proprietarios.getProprietariosByUser(user)== null) {
+                    this.proprietarios.addProprietario(p);
                     System.out.println("Utilizador registado com sucesso, por favor proceda a login");
                 } else {
                     System.out.println("Utilizador já existente! ");
@@ -150,9 +146,19 @@ public class UMCarro {
     }
     private void menuCliente() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Indique a sua localização x:");
+        Double locX = scanner.nextDouble();
+        System.out.println("Indique a sua localização y:");
+        Double locY = scanner.nextDouble();
+        System.out.println("Indique a localização x para onde quer viajar:");
+        Double tripX = scanner.nextDouble();
+        System.out.println("Indique a localização x para onde quer viajar:");
+        Double tripY = scanner.nextDouble();
+        this.cliente.setCordX(locX);
+        this.cliente.setCordY(locY);
         System.out.println("Selecione a sua opção\n" +
-                "1: Ver Lista de Veiculos disponíveis. \n" +
-                "2: Ver Veiculo mais próximo. \n" +
+                "1: Ver Lista de Veiculos disponíveis e compatíveis com a sua viagem. \n" +
+                "2: Ver Veiculo mais próximo e compatível com a sua viagem. \n" +
                 "3: Ver Veículos com autonomia desejada (km).\n" +
                 "4: Ver Veículos mais alcançáveis a pé.\n" +
                 "5: Ver Veículos com taxa diária mais baratas.\n");
@@ -239,6 +245,7 @@ public class UMCarro {
 
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         UMCarro app = new UMCarro();
         System.out.println("Bem-Vindo ao UMCarroJá ");

@@ -6,6 +6,15 @@ import java.util.List;
 public class Veiculos {
     private ArrayList<Veiculo> veiculos;
 
+    public Veiculo getVeiculoByMatricula (String matricula){
+        for (Veiculo v : this.veiculos){
+            if (v.getMatricula().equals(matricula)) {
+                return v;
+            }
+        }
+        return null;
+    }
+
     public Veiculos(ArrayList<Veiculo> veiculos) {
         this.veiculos = veiculos;
     }
@@ -26,7 +35,7 @@ public class Veiculos {
         this.veiculos.add(v);
     }
 
-    public Veiculo veiculoMaisProximo(Float x, Float y){
+    public Veiculo veiculoMaisProximo(Double x, Double y){
         Veiculo aux = null;
         Double dfinal = 99999999999999999999999999999999999.99;
         for(Veiculo v: this.veiculos) {
@@ -41,7 +50,7 @@ public class Veiculos {
 
     public List<String> veiculoComAutonomiaDesejada (Integer x) {
         int i=0;
-        List<String> ret = new ArrayList<String>();
+        List<String> ret = new ArrayList<>();
         for (Veiculo v: this.veiculos) {
             if (x <= v.getAutonomia()) {
                 ret.add( (++i) + ":" + " " + v.getMatricula() + " " + v.getMarca() + " " + (v.getAutonomia()) + " " + v.getPrecoPorKm()+ "€");
