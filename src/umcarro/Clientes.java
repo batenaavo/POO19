@@ -23,6 +23,7 @@ public class Clientes {
 
     public Clientes() {
         this.clientes = new HashMap<>();
+
     }
 
     public void addCliente(Cliente cliente){
@@ -46,6 +47,8 @@ public class Clientes {
     public void setClientes(HashMap<Integer, Cliente> clientes) {
         this.clientes = clientes;
     }
+
+
 
 
 
