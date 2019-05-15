@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b8a189-f223-4910-937b-8ac633d7778f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Clientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Pedidos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/UMCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/UMCarro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Veiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Veiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/UMCarro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/UMCarro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Veiculo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Veiculo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Veiculos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Veiculos.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +27,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/umcarro/UMCarro.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="419">
-                  <caret line="214" column="69" selection-start-line="214" selection-start-column="69" selection-end-line="214" selection-end-column="69" />
+                <state relative-caret-position="399">
+                  <caret line="270" column="5" lean-forward="true" selection-start-line="270" selection-start-column="5" selection-end-line="270" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -42,16 +39,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Clientes.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="481">
+                <state relative-caret-position="760">
                   <caret line="50" selection-start-line="50" selection-end-line="50" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#695#696#0" expanded="true" />
-                    <element signature="e#740#741#0" expanded="true" />
-                    <element signature="e#951#952#0" expanded="true" />
-                    <element signature="e#982#983#0" expanded="true" />
-                    <element signature="e#1049#1050#0" expanded="true" />
-                    <element signature="e#1089#1090#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -70,7 +61,7 @@
             <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietarios.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="540">
-                  <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+                  <caret line="35" selection-start-line="35" selection-end-line="35" />
                 </state>
               </provider>
             </entry>
@@ -91,10 +82,10 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/input.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="203">
+                <state relative-caret-position="-817">
                   <caret line="368" column="62" selection-start-line="368" selection-start-column="50" selection-end-line="368" selection-end-column="69" />
                 </state>
               </provider>
@@ -103,67 +94,19 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
+                <state relative-caret-position="1800">
                   <caret line="130" column="16" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#1221#1222#0" expanded="true" />
-                    <element signature="e#1248#1249#0" expanded="true" />
-                    <element signature="e#1288#1289#0" expanded="true" />
-                    <element signature="e#1320#1321#0" expanded="true" />
-                    <element signature="e#1352#1353#0" expanded="true" />
-                    <element signature="e#1380#1381#0" expanded="true" />
-                    <element signature="e#1422#1423#0" expanded="true" />
-                    <element signature="e#1456#1457#0" expanded="true" />
-                    <element signature="e#1492#1493#0" expanded="true" />
-                    <element signature="e#1524#1525#0" expanded="true" />
-                    <element signature="e#1574#1575#0" expanded="true" />
-                    <element signature="e#1616#1617#0" expanded="true" />
-                    <element signature="e#1647#1648#0" expanded="true" />
-                    <element signature="e#1673#1674#0" expanded="true" />
-                    <element signature="e#1712#1713#0" expanded="true" />
-                    <element signature="e#1742#1743#0" expanded="true" />
-                    <element signature="e#1785#1786#0" expanded="true" />
-                    <element signature="e#1823#1824#0" expanded="true" />
-                    <element signature="e#1886#1887#0" expanded="true" />
-                    <element signature="e#1940#1941#0" expanded="true" />
-                    <element signature="e#1977#1978#0" expanded="true" />
-                    <element signature="e#2010#2011#0" expanded="true" />
-                    <element signature="e#2062#2063#0" expanded="true" />
-                    <element signature="e#2106#2107#0" expanded="true" />
-                    <element signature="e#2145#2146#0" expanded="true" />
-                    <element signature="e#2180#2181#0" expanded="true" />
-                    <element signature="e#2236#2237#0" expanded="true" />
-                    <element signature="e#2284#2285#0" expanded="true" />
-                    <element signature="e#2321#2322#0" expanded="true" />
-                    <element signature="e#2353#2354#0" expanded="true" />
-                    <element signature="e#2404#2405#0" expanded="true" />
-                    <element signature="e#2446#2447#0" expanded="true" />
-                    <element signature="e#2478#2479#0" expanded="true" />
-                    <element signature="e#2506#2507#0" expanded="true" />
-                    <element signature="e#2548#2549#0" expanded="true" />
-                    <element signature="e#2582#2583#0" expanded="true" />
-                    <element signature="e#2614#2615#0" expanded="true" />
-                    <element signature="e#2642#2643#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculos.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="113" column="41" lean-forward="true" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
+                <state relative-caret-position="-180">
+                  <caret line="113" column="41" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#419#420#0" expanded="true" />
-                    <element signature="e#459#460#0" expanded="true" />
-                    <element signature="e#484#485#0" expanded="true" />
-                    <element signature="e#533#534#0" expanded="true" />
-                    <element signature="e#580#581#0" expanded="true" />
-                    <element signature="e#611#612#0" expanded="true" />
-                    <element signature="e#671#672#0" expanded="true" />
-                    <element signature="e#711#712#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -172,31 +115,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Pedido.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+                <state relative-caret-position="1300">
+                  <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
                   <folding>
-                    <element signature="e#667#668#0" expanded="true" />
-                    <element signature="e#692#693#0" expanded="true" />
-                    <element signature="e#1116#1117#0" expanded="true" />
-                    <element signature="e#1144#1145#0" expanded="true" />
-                    <element signature="e#885#886#0" expanded="true" />
-                    <element signature="e#917#918#0" expanded="true" />
-                    <element signature="e#967#968#0" expanded="true" />
-                    <element signature="e#1009#1010#0" expanded="true" />
-                    <element signature="e#510#511#0" expanded="true" />
-                    <element signature="e#536#537#0" expanded="true" />
-                    <element signature="e#575#576#0" expanded="true" />
-                    <element signature="e#605#606#0" expanded="true" />
-                    <element signature="e#641#642#0" expanded="true" />
-                    <element signature="e#673#674#0" expanded="true" />
-                    <element signature="e#723#724#0" expanded="true" />
-                    <element signature="e#765#766#0" expanded="true" />
-                    <element signature="e#801#802#0" expanded="true" />
-                    <element signature="e#833#834#0" expanded="true" />
                     <element signature="e#1405#1406#0" expanded="true" />
-                    <element signature="e#1436#1437#0" expanded="true" />
-                    <element signature="e#1485#1486#0" expanded="true" />
-                    <element signature="e#1525#1526#0" expanded="true" />
+                    <element signature="e#1439#1440#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -205,7 +128,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Utilizador.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-653">
+                <state relative-caret-position="440">
                   <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
                 </state>
               </provider>
@@ -214,7 +137,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Pedidos.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
+                <state relative-caret-position="500">
                   <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -291,22 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
-              <item name="POO19" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
-              <item name="POO19" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -323,7 +231,22 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="POO19" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="POO19" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,7 +324,8 @@
       <workItem from="1557686264584" duration="3770000" />
       <workItem from="1557766207955" duration="56000" />
       <workItem from="1557781129961" duration="12377000" />
-      <workItem from="1557805070200" duration="22884000" />
+      <workItem from="1557805070200" duration="23540000" />
+      <workItem from="1557887424029" duration="919000" />
     </task>
     <task id="LOCAL-00001" summary="Definição de primeiros objetos, e inicialização de alguns métodos">
       <created>1556795248870</created>
@@ -445,11 +369,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557796920075</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Restruturação de classes e criação de métodos fulcrais.">
+      <created>1557876005661</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557876005661</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75015000" />
+    <option name="totallyTimeSpent" value="76590000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,9 +393,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4959893" visible="true" weight="0.0836887" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4959893" visible="true" weight="0.08422175" />
       <window_info id="Structure" order="1" sideWeight="0.502693" side_tool="true" weight="0.12886049" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -474,7 +404,7 @@
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.3296582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.41553813" visible="true" weight="0.24366042" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.41553813" weight="0.24366042" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -537,7 +467,8 @@
     <MESSAGE value="&#10;Adição novamente de password e classe proprietarios, link de proprietarios com nif através de hashmap , veiculos." />
     <MESSAGE value="DataDump" />
     <MESSAGE value="DataDump e várias coisas a adicionar." />
-    <option name="LAST_COMMIT_MESSAGE" value="DataDump e várias coisas a adicionar." />
+    <MESSAGE value="Restruturação de classes e criação de métodos fulcrais." />
+    <option name="LAST_COMMIT_MESSAGE" value="Restruturação de classes e criação de métodos fulcrais." />
   </component>
   <component name="editorHistoryManager">
     <entry file="uml://JavaScript-modules-diagram//Users/tgbz/Google Drive/MyFiles/Uni/POO/Trabalho/POO19">
@@ -576,10 +507,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../pooBlueJ/POO19/src/umcarro/Cliente.java" />
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Clientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietarios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
@@ -593,70 +541,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Clientes.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/input.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1049#1050#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-817">
+          <caret line="368" column="62" selection-start-line="368" selection-start-column="50" selection-end-line="368" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietarios.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Utilizador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-653">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        <state relative-caret-position="1800">
+          <caret line="130" column="16" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/umcarro/Pedido.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+        <state relative-caret-position="1300">
+          <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
           <folding>
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#967#968#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
             <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1436#1437#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Utilizador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/umcarro/Pedidos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="500">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -664,82 +583,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="130" column="16" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
-          <folding>
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1248#1249#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1456#1457#0" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
-            <element signature="e#1524#1525#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1616#1617#0" expanded="true" />
-            <element signature="e#1647#1648#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1712#1713#0" expanded="true" />
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1785#1786#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
-            <element signature="e#1886#1887#0" expanded="true" />
-            <element signature="e#1940#1941#0" expanded="true" />
-            <element signature="e#1977#1978#0" expanded="true" />
-            <element signature="e#2010#2011#0" expanded="true" />
-            <element signature="e#2062#2063#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#2145#2146#0" expanded="true" />
-            <element signature="e#2180#2181#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2321#2322#0" expanded="true" />
-            <element signature="e#2353#2354#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-            <element signature="e#2446#2447#0" expanded="true" />
-            <element signature="e#2478#2479#0" expanded="true" />
-            <element signature="e#2506#2507#0" expanded="true" />
-            <element signature="e#2548#2549#0" expanded="true" />
-            <element signature="e#2582#2583#0" expanded="true" />
-            <element signature="e#2614#2615#0" expanded="true" />
-            <element signature="e#2642#2643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="113" column="41" lean-forward="true" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
+        <state relative-caret-position="-180">
+          <caret line="113" column="41" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="368" column="62" selection-start-line="368" selection-start-column="50" selection-end-line="368" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/umcarro/UMCarro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="214" column="69" selection-start-line="214" selection-start-column="69" selection-end-line="214" selection-end-column="69" />
+        <state relative-caret-position="399">
+          <caret line="270" column="5" lean-forward="true" selection-start-line="270" selection-start-column="5" selection-end-line="270" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
