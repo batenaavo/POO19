@@ -30,6 +30,7 @@ public class UMCarro {
 
     private void DataDump(){
         try{
+            /*TODO droppar as primeiras linhas */
             FileReader fr = new FileReader("C:\\Users\\Teste 1\\Documents\\GitHub\\poo2019\\POO19\\src\\umcarro" +
                     "\\input.txt");
             BufferedReader br = new BufferedReader(fr);
@@ -245,32 +246,50 @@ public class UMCarro {
 
 
     private void menuProprietario() {
-        this.veiculos = this.veiculos.getveiculoByProprietário(this.proprietario.getNif());
+        Veiculos veiculosDoProp = this.veiculos.getveiculoByProprietário(this.proprietario.getNif());
         Scanner scanner = new Scanner(System.in);
         System.out.println("Selecione a sua opção\n" +
                 "1: Abastecer Carro(alterar autonomia). \n" +
-                "2: Sinalizar Veículo Disponível. \n" +
-                "3: Alterar preço por km de Veículo. (km).\n" +
-                "4: Ver propostas de cliente.\n" +
-                "5: Registar quanto custou a viagem.\n");
+                "2: Alterar preço por km de Veículo. (km).\n" +
+                "3: Ver propostas de cliente.\n" +
+                "4: Registar quanto custou a viagem.\n");
         String optionSelected = scanner.nextLine();
         switch(optionSelected){
             case "1":
-                System.out.println("Indique a matrícula do carro que pretende abastecer:\n");
-               /* String carroAbastecer = scanner.nextLine();
-                for (Veiculo v: this.veiculos) {
-                    carroAbastecer =
-                }
-                if (carroAbastecer.equals(v.getMatricula())) {
-
-                }
-*/
+                Veiculo v = this.veiculos.selectMatricula(this.veiculos);
+                System.out.println("Indique a autonomia resultante do abastecimento do veículo:");
+                Double autonomiaSelect = scanner.nextDouble();
+                v.setAutonomia(autonomiaSelect);
+                break;
             case "2":
+                Veiculo v2 = this.veiculos.selectMatricula(this.veiculos);
+                System.out.println("Indique o novo preço por km:");
+                Double novoPrecoKm = scanner.nextDouble();
+                v2.setPrecoPorKm(novoPrecoKm);
+                break;
+            case "3":
+                Pedidos pedProp = this.pedidos.getPedidosDeProp(this.proprietario.getNif());
+                System.out.println(pedProp);
+                System.out.println("Indique o id do pedido que pretende aceitar:");
+                Integer idSelec = scanner.
+            case "4";
 
         }
     }
 
+    private void pedidosManager() {
+        Scanner scanner = new Scanner(System.in);
+        Pedidos pedProp = this.pedidos.getPedidosDeProp(this.proprietario.getNif());
+        System.out.println(pedProp);
+        System.out.println("Introduza o id do pedido que quer gerir:");
+        Integer idSelec = scanner.nextInt();
+        System.out.println("Escolha uma das seguintes opções" +
+                "1: Aceitar." +
+                "2: Recusar.");
+        String optionSelected = scanner.nextLine();
+        if (optionSelected)
 
+    }
 
 
 /*

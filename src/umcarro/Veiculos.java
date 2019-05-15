@@ -48,19 +48,7 @@ public class Veiculos {
         }
         return veiculosByProp;
     }
-    /*public Veiculo veiculoMaisProximo(Double x, Double y){
-        Veiculo aux = null;
-        Double dfinal = 99999999999999999999999999999999999.99;
-        for(Veiculo v: this.veiculos) {
-           Double dist = Math.sqrt((v.getCordY() - y) * (v.getCordY() - y) + (v.getCordX() - x) * (v.getCordX() - x));
-           if(dist<=dfinal){
-               aux = v;
-               dfinal = dist;
-            }
-        }
-        return aux;
-    }
-*/
+
     public Veiculos veiculoComAutonomiaDesejada (Double x) {
         int i=0;
         Veiculos ret = new Veiculos();
@@ -160,7 +148,8 @@ public class Veiculos {
         return null;
     }
 
-    private Veiculo selectMatricula(Veiculos veiculosCapazes){
+
+    public Veiculo selectMatricula(Veiculos veiculosCapazes){
         Scanner scanner = new Scanner(System.in);
         System.out.print(veiculosCapazes);
         System.out.println("Indique o a matrícula do veículo desejado:");
