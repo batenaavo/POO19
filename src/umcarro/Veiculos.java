@@ -39,7 +39,7 @@ public class Veiculos {
 
 
 
-    public Veiculos getveiculoByProprietário(Integer x){
+    public Veiculos getVeiculosDeProprietário(Integer x){
         Veiculos veiculosByProp = new Veiculos();
         for (Veiculo v : this.veiculos){
             if (v.getNif().equals(x)) {
@@ -49,8 +49,16 @@ public class Veiculos {
         return veiculosByProp;
     }
 
+    public Veiculo getVeiculoByProprietario(Integer x){
+        for (Veiculo v: this.veiculos) {
+           if (v.getNif().equals(x)){
+               return v;
+           }
+        }
+        return null;
+    }
+
     public Veiculos veiculoComAutonomiaDesejada (Double x) {
-        int i=0;
         Veiculos ret = new Veiculos();
         for (Veiculo v: this.veiculos) {
             if (x <= v.getAutonomia()) {
@@ -61,7 +69,6 @@ public class Veiculos {
     }
 
     public Veiculos veiculoAlcancavel (Double raio, Double x1, Double x2) {
-        int i = 0;
         Veiculos veiculosDisp = new Veiculos();
         for (Veiculo v : this.veiculos) {
             if (raio >= distanciaEntrePontos(x1, v.getCordX(), x2, v.getCordY())) {

@@ -19,6 +19,7 @@ public class Pedidos {
         return this.pedidos;
     }
 
+
     public Pedidos getPedidosDeProp (Integer nif){
         Pedidos ps = new Pedidos();
         for (Pedido p: this.pedidos){
@@ -26,18 +27,22 @@ public class Pedidos {
                 ps.addNewPedido(p);
             }
         }
+        return null;
     }
 
-    public Pedido reviewPedidos (Pedido p){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Indique o id do pedido que pretende aceitar");
-
-    }
 
     public Pedido addNewPedido(Pedido p) {
         p.setId(this.pedidosCounter++);
         this.pedidos.add(p);
         return p;
+    }
+
+    public Pedido selectPedidoById (Integer id){
+        for (Pedido p: this.pedidos) {
+            if (p.getId().equals(id)) {
+                return p;
+            }
+        } return null;
     }
 
     @Override

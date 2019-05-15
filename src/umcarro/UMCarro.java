@@ -246,13 +246,12 @@ public class UMCarro {
 
 
     private void menuProprietario() {
-        Veiculos veiculosDoProp = this.veiculos.getveiculoByProprietário(this.proprietario.getNif());
+        Veiculos veiculosDoProp = this.veiculos.getVeiculosDeProprietário(this.proprietario.getNif());
         Scanner scanner = new Scanner(System.in);
         System.out.println("Selecione a sua opção\n" +
                 "1: Abastecer Carro(alterar autonomia). \n" +
                 "2: Alterar preço por km de Veículo. (km).\n" +
-                "3: Ver propostas de cliente.\n" +
-                "4: Registar quanto custou a viagem.\n");
+                "3: Ver propostas de cliente.\n");
         String optionSelected = scanner.nextLine();
         switch(optionSelected){
             case "1":
@@ -268,11 +267,8 @@ public class UMCarro {
                 v2.setPrecoPorKm(novoPrecoKm);
                 break;
             case "3":
-                Pedidos pedProp = this.pedidos.getPedidosDeProp(this.proprietario.getNif());
-                System.out.println(pedProp);
-                System.out.println("Indique o id do pedido que pretende aceitar:");
-                Integer idSelec = scanner.
-            case "4";
+                pedidosManager();
+                break;
 
         }
     }
@@ -287,11 +283,34 @@ public class UMCarro {
                 "1: Aceitar." +
                 "2: Recusar.");
         String optionSelected = scanner.nextLine();
-        if (optionSelected)
-
+        if (optionSelected.equals("1")) {
+            exportPedido(this.pedidos.selectPedidoById(idSelec));
+            pedidosManager();
+        } else if (optionSelected.equals("2")) {
+            cancelPedido(this.pedidos.selectPedidoById(idSelec));
+            pedidosManager();
+        } else {
+            System.out.println("Opção Inválida");
+            pedidosManager();
+        }
     }
 
 
+    public void exportPedido (Pedido p) {
+        p.setPendente(false);
+        this.cliente.setCordX(p.getCordXDest());
+        this.cliente.setCordY(p.getCordYDest());
+        this.veiculos.getVeiculosDeProprietário(p.getNif()).getVeiculoByProprietario(p.getNif()).setCordX(p.getCordXDest());
+        this.veiculos.getVeiculosDeProprietário(p.getNif()).getVeiculoByProprietario(p.getNif()).setCordY(p.getCordYDest());
+    }
+
+    public void cancelPedido (Pedido ps) {
+        for (Pedido p: this.pedidos.getPedidos()) {
+            if (p.equals(ps)) {
+                p = null;
+            }
+        }
+    }
 /*
     private void autonomiaSelector(Veiculos listaVeiculos){
         Scanner scanner = new Scanner(System.in);
