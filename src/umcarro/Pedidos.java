@@ -20,16 +20,25 @@ public class Pedidos {
     }
 
 
-    public Pedidos getPedidosDeProp (Integer nif){
+    public Pedidos getPedidosDeCliente (Integer nif){
         Pedidos ps = new Pedidos();
         for (Pedido p: this.pedidos){
-            if (p.getNif().equals(nif) && p.getPendente()) {
+            if (p.getNifCliente().equals(nif) && p.getPendente()) {
                 ps.addNewPedido(p);
             }
         }
         return null;
     }
 
+    public Pedidos getPedidosDeProp (Integer nif){
+        Pedidos ps = new Pedidos();
+        for (Pedido p: this.pedidos){
+            if (p.getNifProprietario().equals(nif) && p.getPendente()) {
+                ps.addNewPedido(p);
+            }
+        }
+        return null;
+    }
 
     public Pedido addNewPedido(Pedido p) {
         p.setId(this.pedidosCounter++);
@@ -45,6 +54,21 @@ public class Pedidos {
         } return null;
     }
 
+    public void removePedido (Pedido p){
+        if (this.pedidos.contains(p)) {
+            this.pedidos.remove(p);
+        }
+    }
+
+    public Pedidos getPedidosPorClassificarDeCliente (Cliente c) throws NaoTemPedidos {
+        Pedidos porClass = new Pedidos();
+        for (Pedido p : this.pedidos) {
+            if (p.getPorClassificar()) {
+                porClass.addNewPedido(p);
+            } return porClass;
+        } throw new NaoTemPedidos();
+    }
+    //FIXME
     @Override
     public String toString() {
         return "Pedidos{" +

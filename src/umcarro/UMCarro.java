@@ -31,8 +31,7 @@ public class UMCarro {
     private void DataDump(){
         try{
             /*TODO droppar as primeiras linhas */
-            FileReader fr = new FileReader("C:\\Users\\Teste 1\\Documents\\GitHub\\poo2019\\POO19\\src\\umcarro" +
-                    "\\input.txt");
+            FileReader fr = new FileReader("src/logsPOO_carregamentoInicial.bak");
             BufferedReader br = new BufferedReader(fr);
             String line;
             while((line = br.readLine())!=null) {
@@ -52,13 +51,13 @@ public class UMCarro {
                     case "NovoCarro":
                         Veiculo v = new Veiculo(toAdd[0],toAdd[1],toAdd[2],Integer.parseInt(toAdd[3]),
                                 Integer.parseInt(toAdd[4]),Double.parseDouble(toAdd[5]),Double.parseDouble(toAdd[6]),
-                                Double.parseDouble(toAdd[7]),Double.parseDouble(toAdd[8]),Double.parseDouble(toAdd[9]));
+                                Double.parseDouble(toAdd[7]),Double.parseDouble(toAdd[8]),Double.parseDouble(toAdd[9]),0.0);
                        this.veiculos.addVeiculo(v);
                         break;
                     case "Aluguer":
                         Integer nif = Integer.parseInt(toAdd[0]);
-                         Pedido a = new Pedido(nif,Double.parseDouble(toAdd[1]),
-                                 Double.parseDouble(toAdd[2]),null,toAdd[4],false);
+                         Pedido a = new Pedido(null,nif,Double.parseDouble(toAdd[1]),
+                                 Double.parseDouble(toAdd[2]),null,toAdd[4],false,false);
                          String tipoComb = toAdd[3];
                          if (a.getPreferencia().equals("MaisBarato")) {
                              Veiculo v1 = veiculos.selectMaisBarato(a.getCordXDest(),a.getCordYDest(),
@@ -76,10 +75,10 @@ public class UMCarro {
                     case "Classificar":
                         if (toAdd[0].length() > 8){
                             this.clientes.addRating(Integer.parseInt(toAdd[0]),Double.parseDouble(toAdd[1]));
-                            this.proprietarios.addRating(Integer.parseInt(toAdd[0]),Double.parseDouble(toAdd[1]));
+                            this.proprietarios.addRatingToProp(Integer.parseInt(toAdd[0]),Double.parseDouble(toAdd[1]));
                         } else {
                             Veiculo g = this.veiculos.getVeiculoByMatricula(toAdd[0]);
-                            this.proprietarios.addRating(g.getNif(),Double.parseDouble(toAdd[1]));
+                            this.proprietarios.addRatingToProp(g.getNif(),Double.parseDouble(toAdd[1]));
                             /* mudar rating de proprietarios para carros.*/
                         }
                         break;
@@ -93,24 +92,20 @@ public class UMCarro {
         }
 
     }
-
-    private void login(){
-        System.out.print(this.veiculos);
+    private void login() throws DadosDeAcessoInvalidos, SemVeiculosDisponiveis, OpcaoInvalida, NaoTemPedidos {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Utilizador(email): ");
         String user = scanner.nextLine();
         System.out.print("Password:  ");
         String pwd = scanner.nextLine();
-
+//TODO
         if (this.clientes.getClienteByUser(user)!=null && this.clientes.getClienteByUser(user).validaPassword(pwd)) {
             cliente = this.clientes.getClienteByUser(user);
-            this.menuCliente();
+            menuCliente();
         } else if (this.proprietarios.getProprietariosByUser(user)!=null && this.proprietarios.getProprietariosByUser(user).validaPassword(pwd)) {
             proprietario = this.proprietarios.getProprietariosByUser(user);
-            this.menuProprietario();
-        } else {
-            System.out.println("Username e/ou Password Inválidos. ");
-        }
+            menuProprietario();
+        } else throw new DadosDeAcessoInvalidos();
 
     }
 
@@ -124,17 +119,17 @@ public class UMCarro {
             System.out.println("Opção Inválida! ");
             registo();
         } else {
-            System.out.print("Utilizador(email): ");
+            System.out.println("Utilizador(email): ");
             String user = scanner.nextLine();
-            System.out.print("Password:  ");
+            System.out.println("Password:  ");
             String pwd = scanner.nextLine();
-            System.out.print("Número de Idenficação Fiscal");
+            System.out.println("Número de Idenficação Fiscal");
             Integer nif = scanner.nextInt();
-            System.out.print("Nome: ");
+            System.out.println("Nome: ");
             String nome = scanner.nextLine();
-            System.out.print("Morada: ");
+            System.out.println("Morada: ");
             String morada = scanner.nextLine();
-            System.out.print("Data de Nascimento (mm/dia/ano): ");
+            System.out.println("Data de Nascimento (mm/dia/ano): ");
             String dataNasc = scanner.nextLine();
 
             if (userType.equals("1")) {
@@ -160,7 +155,39 @@ public class UMCarro {
             }
         }
     }
-    private void menuCliente() {
+
+    private void menuCliente() throws SemVeiculosDisponiveis, OpcaoInvalida, NaoTemPedidos {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Escolha uma das seguintes opcoes:" +
+                "1: Classificar Proprietario/Veiculo das Última Viagem"+
+                "2: Alugar Carro");
+        String optionSelected = scanner.nextLine();
+        switch (optionSelected) {
+            case "1":
+                Pedidos ps = this.pedidos.getPedidosPorClassificarDeCliente(this.cliente);
+                if (ps != null){
+                    System.out.println(ps);
+                    System.out.println("Indique o id to pedido que quer realizar classificações:");
+                    Integer id = scanner.nextInt();
+                    System.out.println("Indique a classifcação a dar ao Proprietário:");
+                    Double classProp = scanner.nextDouble();
+                    System.out.println("Indique a classificação que quer dar ao Veículo:");
+                    Double classVeic = scanner.nextDouble();
+                    this.proprietarios.addRatingToProp(ps.selectPedidoById(id).getNifProprietario(), classProp);
+                    this.veiculos.addRatingVeiculo(ps.selectPedidoById(id).getMatricula(), classVeic);
+                    menuCliente();
+            }
+                break;
+            case "2":
+                menuAluguer();
+                break;
+            default : throw new OpcaoInvalida();
+        }
+
+
+    }
+
+    private void menuAluguer() throws SemVeiculosDisponiveis {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Indique a sua localização actual x:");
         Double locX = scanner.nextDouble();
@@ -233,7 +260,7 @@ public class UMCarro {
         System.out.println("Confirma a sua seleção? (Y/N)?");
         String resp = scanner.nextLine();
         if (resp.equals("Y") || resp.equals("y")) {
-            Pedido p = new Pedido(nif, cordXDest, cordYDest, v.getMatricula(), preferencia, true);
+            Pedido p = new Pedido(this.cliente.getNif(),v.getNif(), cordXDest, cordYDest, v.getMatricula(), preferencia, true,true);
             this.pedidos.addNewPedido(p);
             return true;
         } else if (resp.equals("N") || resp.equals("n")){
@@ -246,12 +273,13 @@ public class UMCarro {
 
 
     private void menuProprietario() {
-        Veiculos veiculosDoProp = this.veiculos.getVeiculosDeProprietário(this.proprietario.getNif());
+        //Veiculos veiculosDoProp = this.veiculos.getVeiculosDeProprietário(this.proprietario.getNif());
         Scanner scanner = new Scanner(System.in);
         System.out.println("Selecione a sua opção\n" +
                 "1: Abastecer Carro(alterar autonomia). \n" +
                 "2: Alterar preço por km de Veículo. (km).\n" +
-                "3: Ver propostas de cliente.\n");
+                "3: Adicionar Carro\n" +
+                "4: Ver propostas de cliente.\n");
         String optionSelected = scanner.nextLine();
         switch(optionSelected){
             case "1":
@@ -267,11 +295,15 @@ public class UMCarro {
                 v2.setPrecoPorKm(novoPrecoKm);
                 break;
             case "3":
+                addCarro();
+                break;
+            case "4":
                 pedidosManager();
                 break;
-
         }
     }
+
+
 
     private void pedidosManager() {
         Scanner scanner = new Scanner(System.in);
@@ -279,38 +311,75 @@ public class UMCarro {
         System.out.println(pedProp);
         System.out.println("Introduza o id do pedido que quer gerir:");
         Integer idSelec = scanner.nextInt();
+        Pedido p = this.pedidos.getPedidosDeProp(this.proprietario.getNif()).selectPedidoById(idSelec);
         System.out.println("Escolha uma das seguintes opções" +
                 "1: Aceitar." +
-                "2: Recusar.");
+                "2: Recusar."+
+                "3: Re-selecionar pedido." +
+                "4: Voltar ao menu anterior");
         String optionSelected = scanner.nextLine();
-        if (optionSelected.equals("1")) {
-            exportPedido(this.pedidos.selectPedidoById(idSelec));
-            pedidosManager();
-        } else if (optionSelected.equals("2")) {
-            cancelPedido(this.pedidos.selectPedidoById(idSelec));
-            pedidosManager();
+        switch (optionSelected) {
+            case "1":
+                p.setPendente(false);
+                p.setPorClassificar(true);
+                this.pedidos.addNewPedido(p);
+                this.clientes.getClienteByNif(p.getNifCliente()).setRating(UserRatingManager(proprietario));
+                break;
+            case "2":
+                this.pedidos.removePedido(p);
+                break;
+            case "3":
+                pedidosManager();
+                break;
+            case "4":
+                menuProprietario();
+                break;
+        }
+
+    }
+
+    private Double UserRatingManager(Utilizador x) {
+        if (x instanceof Proprietario) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Indique uma nota que deseja dar ao seu Cliente");
+            Integer rating = scanner.nextInt();
+            return Double.valueOf(rating);
         } else {
-            System.out.println("Opção Inválida");
-            pedidosManager();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Indique uma nota que queira dar ao Proprietario do seu veiculo");
+            Integer rating2 = scanner.nextInt();
+            return Double.valueOf(rating2);
         }
     }
 
 
-    public void exportPedido (Pedido p) {
-        p.setPendente(false);
-        this.cliente.setCordX(p.getCordXDest());
-        this.cliente.setCordY(p.getCordYDest());
-        this.veiculos.getVeiculosDeProprietário(p.getNif()).getVeiculoByProprietario(p.getNif()).setCordX(p.getCordXDest());
-        this.veiculos.getVeiculosDeProprietário(p.getNif()).getVeiculoByProprietario(p.getNif()).setCordY(p.getCordYDest());
+    private void addCarro() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduza o Tipo de Combustivel do Veículo (Gasolina/Electrico/Hibrido):");
+        String tipo = scanner.nextLine();
+        System.out.println("Introduza a marca do veículo");
+        String marca = scanner.nextLine();
+        System.out.println("Introduza a matrícula do veículo");
+        String matricula = scanner.nextLine();
+        //System.out.println("Introduza o seu NIF");
+        //Integer nif = scanner.nextInt();
+        System.out.println("Introduza a velocidade média do veículo (kmh):");
+        Integer velocidademedia = scanner.nextInt();
+        System.out.println("Introduza o preço por km: ");
+        Double precoPorKm = scanner.nextDouble();
+        System.out.println("Introduza o consumo por km: ");
+        Double consumoporKm = scanner.nextDouble();
+        System.out.println("Introduza a autonomia actual do veículo");
+        Double autonomia = scanner.nextDouble();
+        System.out.println("Introduza a localização X do veículo");
+        Double cordX = scanner.nextDouble();
+        System.out.println("Introduza a localização Y do veículo");
+        Double cordY = scanner.nextDouble();
+        Veiculo x = new Veiculo(tipo,marca,matricula,proprietario.getNif(),velocidademedia,precoPorKm,consumoporKm,autonomia,cordX,cordY,0.0);
+        this.veiculos.addVeiculo(x);
+        menuProprietario();
     }
 
-    public void cancelPedido (Pedido ps) {
-        for (Pedido p: this.pedidos.getPedidos()) {
-            if (p.equals(ps)) {
-                p = null;
-            }
-        }
-    }
 /*
     private void autonomiaSelector(Veiculos listaVeiculos){
         Scanner scanner = new Scanner(System.in);
@@ -336,7 +405,7 @@ public class UMCarro {
 */
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DadosDeAcessoInvalidos, SemVeiculosDisponiveis, OpcaoInvalida, NaoTemPedidos {
 
         Scanner scanner = new Scanner(System.in);
         UMCarro app = new UMCarro();

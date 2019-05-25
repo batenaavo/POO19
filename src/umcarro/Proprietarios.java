@@ -16,8 +16,8 @@ public class Proprietarios {
         return null;
     }
 
-
-    public void addRating (Integer nif, Double nota){
+//
+    public void addRatingToProp (Integer nif, Double nota){
         if (this.proprietarios.get(nif) != null)
         this.proprietarios.get(nif).addRating(nota);
     }

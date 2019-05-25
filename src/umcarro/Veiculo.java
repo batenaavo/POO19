@@ -13,6 +13,7 @@ public class Veiculo {
     private Double autonomia;
     private Double cordX;
     private Double cordY;
+    private Double rating;
 
     public Veiculo() {
         this.tipo = null;
@@ -25,10 +26,11 @@ public class Veiculo {
         this.autonomia = null;
         this.cordX = null;
         this.cordY = null;
+        this.rating = null;
     }
 
     public Veiculo(String tipo, String marca, String matricula, Integer nif, Integer velocidadeMedia,
-                   Double precoPorKm, Double consumoPorKm, Double autonomia, Double cordX, Double cordY) {
+                   Double precoPorKm, Double consumoPorKm, Double autonomia, Double cordX, Double cordY, Double rating) {
         this.tipo = tipo;
         this.marca = marca;
         this.matricula = matricula;
@@ -39,6 +41,7 @@ public class Veiculo {
         this.autonomia = autonomia;
         this.cordX = cordX;
         this.cordY = cordY;
+        this.rating = rating;
     }
 
     public String getTipo() {
@@ -121,11 +124,19 @@ public class Veiculo {
         this.cordY = cordY;
     }
 
-    /*public void abastecerCarro(VeiculoString matricula, Double autonomia) {
-        Veiculo v =
-        setAutonomia(autonomia);
+    public Double getRating() {
+        return rating;
     }
-*/
+
+    public void setRating(Double rating) {
+        this.rating = rating;
+    }
+
+    /*public void abastecerCarro(VeiculoString matricula, Double autonomia) {
+            Veiculo v =
+            setAutonomia(autonomia);
+        }
+    */
     @Override
     public java.lang.String toString() {
         return "Veiculo{" +

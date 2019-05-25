@@ -1,27 +1,44 @@
 package umcarro;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 public class Pedido {
     private Integer id;
-    private Integer nif;
+    private Integer nifCliente;
+    private Integer nifProprietario;
     private Double cordXDest;
     private Double cordYDest;
     private String matricula;
     private String preferencia;
     private Boolean pendente;
+    private Boolean porClassificar;
 
 
-    public Pedido(Integer nif, Double cordXDest, Double cordYDest, String matricula,
+    public Pedido(Integer nifCliente, Integer nifProprietario, Double cordXDest, Double cordYDest, String matricula,
                   String preferencia,
-                  Boolean pendente) {
+                  Boolean pendente, Boolean porClassificar) {
         this.id = null;
-        this.nif = nif;
+        this.nifCliente = nifCliente;
+        this.nifProprietario = nifProprietario;
         this.cordXDest = cordXDest;
         this.cordYDest = cordYDest;
         this.matricula = matricula;
         this.preferencia = preferencia;
         this.pendente = pendente;
+        this.porClassificar = porClassificar;
     }
 
+    public Pedido(){
+        this.id = null;
+        this.nifProprietario = null;
+        this.nifCliente = null;
+        this.cordXDest = null;
+        this.cordYDest = null;
+        this.matricula = null;
+        this.preferencia = null;
+        this.pendente = false;
+        this.porClassificar = false;
+    }
 
 
     public Integer getId() {
@@ -40,12 +57,20 @@ public class Pedido {
         this.matricula = matricula;
     }
 
-    public Integer getNif() {
-        return nif;
+    public Integer getNifCliente() {
+        return nifCliente;
     }
 
-    public void setNif(Integer nif) {
-        this.nif = nif;
+    public void setNifCliente(Integer nif) {
+        this.nifCliente = nif;
+    }
+
+    public Integer getNifProprietario() {
+        return nifProprietario;
+    }
+
+    public void setNifProprietario(Integer nifProprietario) {
+        this.nifProprietario = nifProprietario;
     }
 
     public Double getCordXDest() {
@@ -77,20 +102,30 @@ public class Pedido {
         return pendente;
     }
 
-    public void setPendente(Boolean pendente) {
-        this.pendente = pendente;
+    public void setPendente(Boolean porClassificar) {
+        this.porClassificar = porClassificar;
+    }
+
+    public Boolean getPorClassificar() {
+        return porClassificar;
+    }
+
+    public void setPorClassificar(Boolean porClassificar) {
+        this.porClassificar = porClassificar;
     }
 
     @Override
     public String toString() {
         return "Pedido{" +
                 "id=" + id +
-                ", nif=" + nif +
+                ", nifCliente=" + nifCliente +
+                ", nifProprietario=" + nifProprietario +
                 ", cordXDest=" + cordXDest +
                 ", cordYDest=" + cordYDest +
                 ", matricula='" + matricula + '\'' +
                 ", preferencia='" + preferencia + '\'' +
                 ", pendente=" + pendente +
+                ", porClassificar=" + porClassificar +
                 '}';
     }
 }

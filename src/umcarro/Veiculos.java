@@ -170,24 +170,35 @@ public class Veiculos {
         }
     }
 
-    public Veiculo selectMaisBaratoAlcancavel(Scanner scanner, Double locX, Double locY, Double tripX,
-                                          Double tripY,
-                                          Veiculos veiculosRelevantes) {
-        System.out.println("Indique a distância máxima à qual pretende encontrar uma viatura disponível");
-        Double raio = scanner.nextDouble();
-        veiculosRelevantes = veiculosRelevantes.veiculoAlcancavel(raio, locX, locY);
-        Veiculo vSelecionado = veiculosRelevantes.veiculoMaisBarato(tripX, tripY);
-        return  vSelecionado;
+    public Veiculo selectMaisBaratoAlcancavel(Scanner scanner, Double locX, Double locY, Double tripX, Double tripY, Veiculos veiculosRelevantes) throws SemVeiculosDisponiveis {
+        if (veiculosRelevantes != null) {
+            System.out.println("Indique a distância máxima à qual pretende encontrar uma viatura disponível");
+            Double raio = scanner.nextDouble();
+            veiculosRelevantes = veiculosRelevantes.veiculoAlcancavel(raio, locX, locY);
+            Veiculo vSelecionado = veiculosRelevantes.veiculoMaisBarato(tripX, tripY);
+            return vSelecionado;
+        } else throw new SemVeiculosDisponiveis();
     }
 
-    public Veiculo selectMaisBarato( Double tripX, Double tripY, Veiculos veiculosRelevantes) {
-        Veiculo veiculoMaisBarato = veiculosRelevantes.veiculoMaisBarato(tripX,tripY);
-        return veiculoMaisBarato;
+    public Veiculo selectMaisBarato( Double tripX, Double tripY, Veiculos veiculosRelevantes) throws SemVeiculosDisponiveis {
+        if (veiculosRelevantes != null) {
+            Veiculo veiculoMaisBarato = veiculosRelevantes.veiculoMaisBarato(tripX, tripY);
+            return veiculoMaisBarato;
+        } else throw new SemVeiculosDisponiveis();
     }
 
-    public Veiculo selectMaisProximo(Double locX, Double locY,
-                               Veiculos veiculosRelevantes) {
-        Veiculo veiculoMaisProximo = veiculosRelevantes.veiculoMaisProximo(locX, locY);
-        return veiculoMaisProximo;
+    public Veiculo selectMaisProximo(Double locX, Double locY, Veiculos veiculosRelevantes) throws SemVeiculosDisponiveis {
+        if (veiculosRelevantes != null) {
+            Veiculo veiculoMaisProximo = veiculosRelevantes.veiculoMaisProximo(locX, locY);
+            return veiculoMaisProximo;
+        } else throw new SemVeiculosDisponiveis();
+    }
+    public void addRatingVeiculo (String matricula, Double nota){
+        Veiculo v = getVeiculoByMatricula(matricula);
+        for (Veiculo c : this.veiculos) {
+            if (c.equals(v)) {
+                c.setRating(nota);
+            }
+        }
     }
 }
