@@ -1,6 +1,6 @@
 package umcarro;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
+
 
 public class Pedido {
     private Integer id;

@@ -123,10 +123,13 @@ public class UMCarro {
             String user = scanner.nextLine();
             System.out.println("Password:  ");
             String pwd = scanner.nextLine();
-            System.out.println("Número de Idenficação Fiscal");
-            Integer nif = scanner.nextInt();
+            Integer nif;
             System.out.println("Nome: ");
             String nome = scanner.nextLine();
+                do{
+                    System.out.println("Número de Idenficação Fiscal ");
+                    nif = scanner.nextInt();
+                } while (String.valueOf(nif).length()!= 9);
             System.out.println("Morada: ");
             String morada = scanner.nextLine();
             System.out.println("Data de Nascimento (mm/dia/ano): ");
@@ -303,7 +306,7 @@ public class UMCarro {
         }
     }
 
-
+//TODO IMPLEMENTAR CÁLCULO DA AUTONOMIA PÓS VIAGEM
 
     private void pedidosManager() {
         Scanner scanner = new Scanner(System.in);
