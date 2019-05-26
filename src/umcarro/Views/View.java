@@ -31,12 +31,12 @@ public class View {
         return this.scanner.nextLine();
     }
 
-    public String menuProprietario() {
+    public String opcoesProprietario() {
         System.out.println("Selecione a sua opção\n" +
-                "1: Abastecer Carro(alterar autonomia). \n" +
-                "2: Alterar preço por km de Veículo. (km).\n" +
-                "3: Adicionar Carro\n" +
-                "4: Ver propostas de cliente.\n" +
+                "1: Abastecer Carro(alterar autonomia)." +
+                "2: Alterar preço por km de Veículo. (km)." +
+                "3: Adicionar Carro." +
+                "4: Ver propostas de cliente." +
                 "5: Logout");
         return this.scanner.nextLine();
     }

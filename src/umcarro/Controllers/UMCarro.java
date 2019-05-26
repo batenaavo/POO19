@@ -286,7 +286,7 @@ public class UMCarro implements Serializable {
     private void menuProprietario() {
         //Veiculos veiculosDoProp = this.veiculos.getVeiculosDeProprietário(this.proprietario.getNif());
 
-        String optionSelected = this.view.menuProprietario();
+        String optionSelected = this.view.opcoesProprietario();
         switch(optionSelected){
             case "1":
                 Veiculo v = this.veiculos.selectMatricula(this.veiculos);
@@ -315,34 +315,37 @@ public class UMCarro implements Serializable {
 
     private void pedidosManager() {
         Pedidos pedProp = this.pedidos.getPedidosDeProp(this.proprietario.getNif());
-        //PRINT DO OBJECTO PEDIDOS ???? WTF ???? TALVEZ pedProp.toString()
-        System.out.println(pedProp);
-        //???
-        this.view.printMensagem("Introduza o id do pedido que quer gerir:");
-        Integer idSelec = this.view.getInteger();
-        Pedido p = this.pedidos.getPedidosDeProp(this.proprietario.getNif()).selectPedidoById(idSelec);
+        if (pedProp != null) {
+            //PRINT DO OBJECTO PEDIDOS ???? WTF ???? TALVEZ pedProp.toString()
+            System.out.println(pedProp);
+            //???
+            this.view.printMensagem("Introduza o id do pedido que quer gerir:");
+            Integer idSelec = this.view.getInteger();
+            Pedido p = this.pedidos.getPedidosDeProp(this.proprietario.getNif()).selectPedidoById(idSelec);
 
-        String optionSelected = this.view.opcoesPedidos();
-        switch (optionSelected) {
-            case "1":
-                p.setPendente(false);
-                p.setPorClassificar(true);
-                this.pedidos.addNewPedido(p);
-                this.clientes.getClienteByNif(p.getNifCliente()).setRating(UserRatingManager(proprietario));
-                Double traveldist = getTravelDist(p);
-                this.veiculos.getVeiculoByMatricula(p.getMatricula()).setAutonomia((this.veiculos.getVeiculoByMatricula(p.getMatricula()).getAutonomia())-traveldist);
-                break;
-            case "2":
-                this.pedidos.removePedido(p);
-                break;
-            case "3":
-                pedidosManager();
-                break;
-            case "4":
-                menuProprietario();
-                break;
-        }
+            String optionSelected = this.view.opcoesPedidos();
+            switch (optionSelected) {
+                case "1":
+                    p.setPendente(false);
+                    p.setPorClassificar(true);
+                    this.pedidos.addNewPedido(p);
+                    this.clientes.getClienteByNif(p.getNifCliente()).setRating(UserRatingManager(proprietario));
+                    Double traveldist = getTravelDist(p);
+                    this.veiculos.getVeiculoByMatricula(p.getMatricula()).setAutonomia((this.veiculos.getVeiculoByMatricula(p.getMatricula()).getAutonomia()) - traveldist);
+                    break;
+                case "2":
+                    this.pedidos.removePedido(p);
+                    break;
+                case "3":
+                    pedidosManager();
+                    break;
+                case "4":
+                    menuProprietario();
+                    break;
+            }
 
+        } else this.view.printMensagem("Não tem pedidos a gerir!.");
+                this.menuProprietario();
     }
 
     private void precoViagem(Pedido p, Double traveldist) {
@@ -391,30 +394,6 @@ public class UMCarro implements Serializable {
         this.veiculos.addVeiculo(x);
         menuProprietario();
     }
-
-/*
-    private void autonomiaSelector(Veiculos listaVeiculos){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Insira o mínimo de autonomia desejado em kms.");
-        Double autonomia = scanner.nextDouble();
-        List<String> aux = veiculos.veiculoComAutonomiaDesejada(autonomia);
-        System.out.print(aux);
-        System.out.println("Indique o número correspondente ao veículo que deseja selecionar: ");
-        String nVeiculo = scanner.nextLine();
-        String carSelected = "";
-        for(String s : aux) {
-            if (nVeiculo.equals(s.split(" ")[0])) {
-                carSelected = s;
-                break;
-            }
-        }
-        if (confirmationSelector()) {
-            System.out.println("Pedido enviado, aguarde resposta.");
-        } else {
-            autonomiaSelector(listaVeiculos);
-        }
-    }
-*/
 
     public View getView() {
         return view;
