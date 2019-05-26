@@ -20,9 +20,13 @@ public class Main {
         DataBaseSaver db = new DataBaseSaver();
 
 
-        if (db.loadData("src/estado.txt",app) == 0) {
-            app.DataDump(); //Inicialização de Dados
+        try {db.deserializeFromXML();
         }
+        catch (IOException e) {
+            System.out.println("Failed to load Status");
+        }
+            app.DataDump(); //Inicialização de Dados
+
 
         boolean sair = false;
 
@@ -38,7 +42,7 @@ public class Main {
                 case "3":
                     sair = true;
                     app.getView().printMensagem("Obrigado!");
-                    db.saveData("src/estado.txt",app);
+                    db.serializeToXML(app);
                     break;
                 default:
                     app.getView().printMensagem("Opção não encontrada!");

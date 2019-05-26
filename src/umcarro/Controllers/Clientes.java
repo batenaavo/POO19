@@ -10,7 +10,6 @@ public class Clientes {
     private HashMap<Integer, Cliente> clientes;
 
 
-
     public Clientes(HashMap<Integer, Cliente> clientes) {
         this.clientes = clientes;
     }
