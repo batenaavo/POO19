@@ -1,4 +1,4 @@
-package umcarro;
+package umcarro.Models;
 
 
 
@@ -12,11 +12,12 @@ public class Pedido {
     private String preferencia;
     private Boolean pendente;
     private Boolean porClassificar;
+    private Double precoViagem;
 
 
     public Pedido(Integer nifCliente, Integer nifProprietario, Double cordXDest, Double cordYDest, String matricula,
                   String preferencia,
-                  Boolean pendente, Boolean porClassificar) {
+                  Boolean pendente, Boolean porClassificar, Double precoViagem) {
         this.id = null;
         this.nifCliente = nifCliente;
         this.nifProprietario = nifProprietario;
@@ -26,6 +27,7 @@ public class Pedido {
         this.preferencia = preferencia;
         this.pendente = pendente;
         this.porClassificar = porClassificar;
+        this.precoViagem = precoViagem;
     }
 
     public Pedido(){
@@ -38,6 +40,7 @@ public class Pedido {
         this.preferencia = null;
         this.pendente = false;
         this.porClassificar = false;
+        this.precoViagem = null;
     }
 
 
@@ -112,6 +115,14 @@ public class Pedido {
 
     public void setPorClassificar(Boolean porClassificar) {
         this.porClassificar = porClassificar;
+    }
+
+    public Double getPrecoViagem() {
+        return precoViagem;
+    }
+
+    public void setPrecoViagem(Double precoViagem) {
+        this.precoViagem = precoViagem;
     }
 
     @Override

@@ -1,8 +1,10 @@
-package umcarro;
+package umcarro.Controllers;
+
+import umcarro.Controllers.Exceptions.NaoTemPedidos;
+import umcarro.Models.Cliente;
+import umcarro.Models.Pedido;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
 
 public class Pedidos {
 

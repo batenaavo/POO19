@@ -1,13 +1,15 @@
-package umcarro;
+package umcarro.Models;
+
+import umcarro.Controllers.Pedidos;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
 
-public class Proprietario extends Utilizador{
+public class Proprietario extends Utilizador {
 
-    private HashMap<String,Veiculo> veiculos;
+    private HashMap<String, Veiculo> veiculos;
     private ArrayList<Pedidos> pedidosArray;
 
 

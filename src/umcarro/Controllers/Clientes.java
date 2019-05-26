@@ -1,12 +1,12 @@
-package umcarro;
+package umcarro.Controllers;
 
-import java.util.ArrayList;
+import umcarro.Models.Cliente;
+
 import java.util.HashMap;
-import java.util.List;
 
 public class Clientes {
 
-    private HashMap<Integer,Cliente> clientes;
+    private HashMap<Integer, Cliente> clientes;
 
 
 

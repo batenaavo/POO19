@@ -1,7 +1,9 @@
-package umcarro;
+package umcarro.Controllers;
+
+import umcarro.Controllers.Exceptions.SemVeiculosDisponiveis;
+import umcarro.Models.Veiculo;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Veiculos {
@@ -132,9 +134,7 @@ public class Veiculos {
                 '}';
     }
 
-    public Veiculo selectVeiculoAutonomia(Scanner scanner, Veiculos veiculosRelevantes) {
-        System.out.println("Indique a autonomia desejada:");
-        Double autonomiaDes = scanner.nextDouble();
+    public Veiculo selectVeiculoAutonomia(Double autonomiaDes, Veiculos veiculosRelevantes) {
         Veiculos veiculosCapazes = veiculosRelevantes.veiculoComAutonomiaDesejada(autonomiaDes);
         boolean chosen2= false;
         while (!chosen2) {
@@ -170,10 +170,8 @@ public class Veiculos {
         }
     }
 
-    public Veiculo selectMaisBaratoAlcancavel(Scanner scanner, Double locX, Double locY, Double tripX, Double tripY, Veiculos veiculosRelevantes) throws SemVeiculosDisponiveis {
+    public Veiculo selectMaisBaratoAlcancavel(Double raio, Double locX, Double locY, Double tripX, Double tripY, Veiculos veiculosRelevantes) throws SemVeiculosDisponiveis {
         if (veiculosRelevantes != null) {
-            System.out.println("Indique a distância máxima à qual pretende encontrar uma viatura disponível");
-            Double raio = scanner.nextDouble();
             veiculosRelevantes = veiculosRelevantes.veiculoAlcancavel(raio, locX, locY);
             Veiculo vSelecionado = veiculosRelevantes.veiculoMaisBarato(tripX, tripY);
             return vSelecionado;

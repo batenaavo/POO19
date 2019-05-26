@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2b8a189-f223-4910-937b-8ac633d7778f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/umcarro/DadosDeAcessoInvalidos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/umcarro/NaoTemPedidos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/umcarro/OpcaoInvalida.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/umcarro/SemVeiculosDisponiveis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logsPOO_carregamentoInicial.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Proprietario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Proprietario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/UMCarro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/UMCarro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Utilizador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Utilizador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Veiculos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Veiculos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Pedidos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Proprietario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Proprietario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Proprietarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Proprietarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/UMCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/UMCarro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/umcarro/Veiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Veiculos.java" afterDir="false" />
-    </list>
+    <list default="true" id="c2b8a189-f223-4910-937b-8ac633d7778f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,73 +12,95 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="POO19-master" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.4925926">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Veiculos.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3060">
+                  <caret line="167" column="38" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/UMCarro.java">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="319">
-                  <caret line="172" column="34" lean-forward="true" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/OpcaoInvalida.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/DadosDeAcessoInvalidos.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="63">
-                  <caret line="3" selection-start-line="3" selection-end-line="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietario.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
-                  <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+                <state relative-caret-position="2800">
+                  <caret line="144" column="39" selection-start-line="144" selection-start-column="39" selection-end-line="144" selection-end-column="39" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#565#566#0" expanded="true" />
-                    <element signature="e#596#597#0" expanded="true" />
-                    <element signature="e#662#663#0" expanded="true" />
-                    <element signature="e#702#703#0" expanded="true" />
-                    <element signature="e#753#754#0" expanded="true" />
-                    <element signature="e#788#789#0" expanded="true" />
-                    <element signature="e#856#857#0" expanded="true" />
-                    <element signature="e#904#905#0" expanded="true" />
-                    <element signature="e#970#971#0" expanded="true" />
-                    <element signature="e#1024#1025#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Utilizador.java">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Pedido.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-10">
-                  <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+                <state relative-caret-position="1700">
+                  <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
+                  <folding>
+                    <element signature="e#2861#2862#0" expanded="true" />
+                    <element signature="e#2895#2896#0" expanded="true" />
+                    <element signature="e#2995#2996#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietarios.java">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/DadosDeAcessoInvalidos.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+                <state relative-caret-position="140">
+                  <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/NaoTemPedidos.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="40">
+                  <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="7" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Pedidos.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="700">
+                  <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="73" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="580">
+                  <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -106,104 +110,20 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculos.java">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Views/View.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="723">
-                  <caret line="202" column="5" lean-forward="true" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
+                <state relative-caret-position="486">
+                  <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/SemVeiculosDisponiveis.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietarios.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Pedido.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-                  <folding>
-                    <element signature="e#1734#1735#0" expanded="true" />
-                    <element signature="e#1772#1773#0" expanded="true" />
-                    <element signature="e#1835#1836#0" expanded="true" />
-                    <element signature="e#1889#1890#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Pedidos.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="736">
-                  <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/NaoTemPedidos.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Cliente.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculo.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1155">
-                  <caret line="125" selection-start-line="125" selection-end-line="125" />
-                  <folding>
-                    <element signature="e#2866#2867#0" expanded="true" />
-                    <element signature="e#2895#2896#0" expanded="true" />
-                    <element signature="e#2939#2940#0" expanded="true" />
-                    <element signature="e#2975#2976#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Clientes.java">
-              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/logsPOO_carregamentoInicial.bak">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-9" />
+                <state relative-caret-position="200">
+                  <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="47" />
+                </state>
               </provider>
             </entry>
           </file>
@@ -225,15 +145,26 @@
       <find>Float</find>
       <find>389521613</find>
       <find>R</find>
-      <find>autonomia</find>
       <find>confirmationSelector</find>
       <find>System.out</find>
       <find>System.out.print(thi</find>
       <find>selectMatricula</find>
       <find>selectVeiculoAutonomia</find>
       <find>selectVeiculoEspecifico</find>
-      <find>System.out.print</find>
       <find>pedido</find>
+      <find>printMenuProprietario</find>
+      <find>printPerferenciaCompostivel</find>
+      <find>System.out.print</find>
+      <find>autonomia</find>
+      <find>distancia</find>
+      <find>menucliente</find>
+      <find>travel</find>
+      <find>Confirma</find>
+      <find>Y</find>
+      <find>new pedido</find>
+      <find>Opção não</find>
+      <find>opção não</find>
+      <find>registo</find>
     </findStrings>
     <replaceStrings>
       <replace>tipo</replace>
@@ -254,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/umcarro/Historico.java" />
         <option value="$PROJECT_DIR$/src/umcarro/Utilizador.java" />
         <option value="$PROJECT_DIR$/src/umcarro/input.txt" />
-        <option value="$PROJECT_DIR$/src/umcarro/Clientes.java" />
         <option value="$PROJECT_DIR$/src/umcarro/Proprietario.java" />
         <option value="$PROJECT_DIR$/src/umcarro/Proprietarios.java" />
         <option value="$PROJECT_DIR$/src/umcarro/SemVeiculosDisponiveis.java" />
@@ -266,52 +196,42 @@
         <option value="$PROJECT_DIR$/src/umcarro/Veiculo.java" />
         <option value="$PROJECT_DIR$/src/umcarro/Veiculos.java" />
         <option value="$PROJECT_DIR$/src/umcarro/UMCarro.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Clientes.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Models/Proprietario.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/DadosDeAcessoInvalidos.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/SemVeiculosDisponiveis.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/NaoTemPedidos.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/OpcaoInvalida.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Views/Inicio.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Views/Tratamento.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/Veiculos.java" />
+        <option value="$PROJECT_DIR$/src/logsPOO_carregamentoInicial.bak" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/ResourceManager.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Views/View.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/Main.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Models/Pedido.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
               <item name="POO19" type="58d84e3e:PackageViewProjectNode" />
               <item name="POO19" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
-              <item name="POO19" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
-              <item name="POO19" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
-              <item name="POO19" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="umcarro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
-              <item name="POO19" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,7 +251,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -350,13 +273,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="UMCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="umcarro.UMCarro" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="umcarro.Controllers.Main" />
       <module name="POO19" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="umcarro.*" />
+          <option name="PATTERN" value="umcarro.Controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UMCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12" />
+      <option name="MAIN_CLASS_NAME" value="umcarro.Controllers.UMCarro" />
+      <module name="POO19" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="umcarro.Models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -366,6 +303,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.UMCarro" />
       </list>
     </recent_temporary>
@@ -400,6 +338,9 @@
       <workItem from="1557944431893" duration="3606000" />
       <workItem from="1558520571175" duration="52000" />
       <workItem from="1558520626978" duration="2000" />
+      <workItem from="1558877547226" duration="15223000" />
+      <workItem from="1558893308843" duration="20000" />
+      <workItem from="1558893425125" duration="68000" />
     </task>
     <task id="LOCAL-00001" summary="Definição de primeiros objetos, e inicialização de alguns métodos">
       <created>1556795248870</created>
@@ -461,7 +402,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90827000" />
+    <option name="totallyTimeSpent" value="106138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,30 +414,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49391955" visible="true" weight="0.15388711" />
-      <window_info id="Structure" order="1" sideWeight="0.50608045" side_tool="true" visible="true" weight="0.0857295" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49201742" visible="true" weight="0.13859275" />
+      <window_info id="Structure" order="1" sideWeight="0.5079826" side_tool="true" weight="0.13646056" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5040107" side_tool="true" weight="0.12886049" />
+      <window_info id="Favorites" order="6" sideWeight="0.50715744" side_tool="true" weight="0.15525672" />
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.3296582" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.41553813" visible="true" weight="0.24057451" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4152452" weight="0.24035281" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.19557522" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.19529653" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49964362" weight="0.26169264" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.49964362" visible="true" weight="0.26019844" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.58446187" side_tool="true" weight="0.37964237" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49253732" weight="0.32460243" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32855567" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5847548" side_tool="true" weight="0.24035281" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49253732" weight="0.32414553" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -554,50 +494,56 @@
     <option name="LAST_COMMIT_MESSAGE" value="Validação de pedidos (WIP)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JavaScript-modules-diagram//Users/tgbz/Google Drive/MyFiles/Uni/POO/Trabalho/POO19">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="848.0" y="540.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MODULES/mdl-POO19">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MODULES</ID>
-          <OriginalElement>mdl-POO19</OriginalElement>
-          <nodes>
-            <node x="" y="">mdl-POO19</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="61.0" y="10.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
+    <entry file="uml://JavaScript-modules-diagram//Users/tgbz/Google Drive/MyFiles/Uni/POO/Trabalho/POO19" />
+    <entry file="uml://MODULES/mdl-POO19" />
     <entry file="file://$PROJECT_DIR$/../pooBlueJ/POO19/src/umcarro/Cliente.java" />
     <entry file="file://$PROJECT_DIR$/src/umcarro/input.txt" />
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Clientes.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietario.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Proprietarios.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        <state relative-caret-position="238">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/EstadoInvalidoException.class" />
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Utilizador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Veiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#2866#2867#0" expanded="true" />
+            <element signature="e#2895#2896#0" expanded="true" />
+            <element signature="e#2939#2940#0" expanded="true" />
+            <element signature="e#2975#2976#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Clientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Proprietario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#565#566#0" expanded="true" />
@@ -614,113 +560,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/SemVeiculosDisponiveis.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Views/Tratamento.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/io/PrintStream.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
+        <state relative-caret-position="217">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/ResourceManager.java" />
+    <entry file="uml://JAVA/umcarro.Controllers.DataBaseSaver">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>umcarro.Controllers.DataBaseSaver</OriginalElement>
+          <nodes>
+            <node x="" y="">umcarro.Controllers.DataBaseSaver</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="62.0" y="13.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/SemVeiculosDisponiveis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/DadosDeAcessoInvalidos.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/OpcaoInvalida.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="120">
+          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/OpcaoInvalida.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Veiculos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="3060">
+          <caret line="167" column="38" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Pedido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
+          <folding>
+            <element signature="e#2861#2862#0" expanded="true" />
+            <element signature="e#2895#2896#0" expanded="true" />
+            <element signature="e#2995#2996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/DadosDeAcessoInvalidos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/NaoTemPedidos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Pedidos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Views/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logsPOO_carregamentoInicial.bak">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9" />
+        <state relative-caret-position="200">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="47" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Cliente.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="2800">
+          <caret line="144" column="39" selection-start-line="144" selection-start-column="39" selection-end-line="144" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/NaoTemPedidos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Pedido.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1835#1836#0" expanded="true" />
-            <element signature="e#1889#1890#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Pedidos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Utilizador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#2866#2867#0" expanded="true" />
-            <element signature="e#2895#2896#0" expanded="true" />
-            <element signature="e#2939#2940#0" expanded="true" />
-            <element signature="e#2975#2976#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Proprietarios.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Veiculos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="202" column="5" lean-forward="true" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/UMCarro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="172" column="34" lean-forward="true" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>POO19</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

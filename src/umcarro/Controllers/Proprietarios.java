@@ -1,4 +1,6 @@
-package umcarro;
+package umcarro.Controllers;
+
+import umcarro.Models.Proprietario;
 
 import java.util.HashMap;
 
