@@ -38,7 +38,6 @@ public class UMCarro implements Serializable {
 
     public void DataDump() throws IOException {
         try {
-            /*TODO droppar as primeiras linhas */
             FileReader fr = new FileReader("src/logsPOO_carregamentoInicial.bak");
             BufferedReader br = new BufferedReader(fr);
             String line;
@@ -97,7 +96,6 @@ public class UMCarro implements Serializable {
         } catch (Exception e)
         {
             e.printStackTrace();
-            // TODO: handle exception
         }
 
     }
@@ -106,7 +104,6 @@ public class UMCarro implements Serializable {
         String user = this.view.getString();
         this.view.printMensagem("Password:  ");
         String pwd = this.view.getString();
-//TODO
         if (this.clientes.getClienteByUser(user)!=null && this.clientes.getClienteByUser(user).validaPassword(pwd)) {
             cliente = this.clientes.getClienteByUser(user);
             menuCliente();

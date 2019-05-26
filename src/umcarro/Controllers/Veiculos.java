@@ -164,12 +164,12 @@ public class Veiculos {
         System.out.println("Indique o a matrícula do veículo desejado:");
         String matriculaDes = scanner.nextLine();
         Veiculo vSelec = veiculosCapazes.getVeiculoByMatricula(matriculaDes);
-        if (vSelec != null) {
-            return  vSelec;
-        } else {
-            System.out.println("Opção Inválida");
-            return null;
+        while (vSelec == null) {
+            System.out.println("Opção Inválida. Volte a indicar a matrícula.");
+            matriculaDes = scanner.nextLine();
+            vSelec = veiculosCapazes.getVeiculoByMatricula(matriculaDes);
         }
+        return  vSelec;
     }
 
     public Veiculo selectMaisBaratoAlcancavel(Double raio, Double locX, Double locY, Double tripX, Double tripY, Veiculos veiculosRelevantes) throws SemVeiculosDisponiveis {

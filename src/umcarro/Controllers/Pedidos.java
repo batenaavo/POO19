@@ -85,7 +85,6 @@ public class Pedidos {
     public void setPedidosCounter(Integer pedidosCounter) {
         this.pedidosCounter = pedidosCounter;
     }
-    //FIXME
     @Override
     public String toString() {
         return "Pedidos{" +
