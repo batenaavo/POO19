@@ -67,12 +67,13 @@ public class View {
         return this.scanner.nextLine();
     }
 
-    public String menuRegisto() {
+    public String userTypeSelect() {
         System.out.println("Selecione a sua opção:\n" +
                 "1:Cliente\n" +
                 "2:Proprietário\n");
         return this.scanner.nextLine();
     }
+
 
     public String getString() {
         return this.scanner.nextLine();
@@ -85,4 +86,6 @@ public class View {
     public Double getDouble() {
         return this.scanner.nextDouble();
     }
+
+
 }

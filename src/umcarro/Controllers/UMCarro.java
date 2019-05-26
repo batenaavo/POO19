@@ -119,9 +119,8 @@ public class UMCarro implements Serializable {
 
     }
 
-    void registo(){
-
-        String userType = this.view.menuRegisto();
+    public void registo(){
+        String userType = this.view.userTypeSelect();
         if (!userType.equals("1") && !userType.equals("2")){
             this.view.printMensagem("Opção Inválida! ");
             registo();
@@ -133,22 +132,22 @@ public class UMCarro implements Serializable {
             Integer nif;
             this.view.printMensagem("Nome: ");
             String nome = this.view.getString();
-                do{
-                    this.view.printMensagem("Número de Idenficação Fiscal ");
-                    nif = this.view.getInteger();
-                } while (String.valueOf(nif).length()!= 9);
+            do {
+                this.view.printMensagem("Número de Idenficação Fiscal; ");
+                nif = this.view.getInteger();
+                this.view.getString();
+            } while (String.valueOf(nif).length() != 9);
             this.view.printMensagem("Morada: ");
             String morada = this.view.getString();
             this.view.printMensagem("Data de Nascimento (mm/dia/ano): ");
             String dataNasc = this.view.getString();
-
             if (userType.equals("1")) {
                 this.view.printMensagem("Localização X");
                 Double cordX = this.view.getDouble();
                 this.view.printMensagem("Localização Y");
                 Double cordY = this.view.getDouble();
                 Cliente c = new Cliente(nome,nif,user,morada,new Date(dataNasc),pwd, cordX, cordY);
-                if (this.clientes.getClienteByUser(user)== null) {
+                if (this.clientes.getClienteByUser(user)== null && this.clientes.getClienteByNif(nif) == null) {
                     this.clientes.addCliente(c);
                     this.view.printMensagem("Utilizador registado com sucesso, por favor proceda a login");
                 } else {
@@ -156,7 +155,7 @@ public class UMCarro implements Serializable {
                 }
             } else {
                 Proprietario p = new Proprietario(nome,nif,user,morada,new Date(dataNasc),pwd);
-                if (this.proprietarios.getProprietariosByUser(user)== null) {
+                if (this.proprietarios.getProprietariosByUser(user)== null && this.proprietarios.getProprietarioByNif(nif)==null) {
                     this.proprietarios.addProprietario(p);
                     this.view.printMensagem("Utilizador registado com sucesso, por favor proceda a login");
                 } else {
