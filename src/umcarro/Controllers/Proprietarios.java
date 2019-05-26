@@ -2,9 +2,15 @@ package umcarro.Controllers;
 
 import umcarro.Models.Proprietario;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 public class Proprietarios {
+
+    public void setProprietarios(HashMap<Integer, Proprietario> proprietarios) {
+        this.proprietarios = proprietarios;
+    }
+
     private HashMap<Integer, Proprietario> proprietarios;
 
     public Proprietarios(){
@@ -23,6 +29,11 @@ public class Proprietarios {
         if (this.proprietarios.get(nif) != null)
         this.proprietarios.get(nif).addRating(nota);
     }
+
+    public HashMap<Integer, Proprietario> getProprietarios() {
+        return proprietarios;
+    }
+
 
     public Proprietarios(HashMap<Integer, Proprietario> proprietarios) {
         this.proprietarios = proprietarios;

@@ -2,13 +2,16 @@ package umcarro.Models;
 
 import umcarro.Controllers.Pedidos;
 
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
 
-public class Proprietario extends Utilizador {
+public class Proprietario extends Utilizador implements Serializable {
 
+    private static final long serialVersionUID = -7563359117801873428L;
     private HashMap<String, Veiculo> veiculos;
     private ArrayList<Pedidos> pedidosArray;
 
@@ -53,6 +56,8 @@ public class Proprietario extends Utilizador {
         for(Pedidos h: this.pedidosArray) {
             historico += h.toString() + "\n\t\t";
         }
+
+
 
         return "Proprietario {" + "\n" +
                 super.toString() + "\n" +

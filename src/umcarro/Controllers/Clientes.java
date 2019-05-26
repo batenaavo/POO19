@@ -2,6 +2,7 @@ package umcarro.Controllers;
 
 import umcarro.Models.Cliente;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 public class Clientes {

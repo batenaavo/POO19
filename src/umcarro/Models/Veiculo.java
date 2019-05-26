@@ -1,8 +1,11 @@
 package umcarro.Models;
 
 
-public class Veiculo {
+import java.io.Serializable;
 
+public class Veiculo implements Serializable {
+
+    private static final long serialVersionUID = -3639427080146926511L;
     private String tipo;
     private String marca;
     private String matricula;
@@ -14,6 +17,8 @@ public class Veiculo {
     private Double cordX;
     private Double cordY;
     private Double rating;
+
+
 
     public Veiculo() {
         this.tipo = null;
@@ -137,6 +142,8 @@ public class Veiculo {
             setAutonomia(autonomia);
         }
     */
+
+
     @Override
     public java.lang.String toString() {
         return "Veiculo{" +

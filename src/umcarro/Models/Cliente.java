@@ -6,10 +6,13 @@
 package umcarro.Models;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Cliente extends Utilizador {
+public class Cliente extends Utilizador implements Serializable{
 
+
+    private static final long serialVersionUID = 1593456512283613043L;
     private Double cordX;
     private Double cordY;
 

@@ -1,8 +1,11 @@
 package umcarro.Models;
 
 
+import java.io.Serializable;
 
-public class Pedido {
+public class Pedido implements Serializable{
+
+    private static final long serialVersionUID = -6975516104879853404L;
     private Integer id;
     private Integer nifCliente;
     private Integer nifProprietario;

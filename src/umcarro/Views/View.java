@@ -1,8 +1,10 @@
 package umcarro.Views;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 public class View {
+
     private Scanner scanner;
 
     public View() {
@@ -74,6 +76,13 @@ public class View {
         return this.scanner.nextLine();
     }
 
+    public Scanner getScanner() {
+        return scanner;
+    }
+
+    public void setScanner(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public String getString() {
         return this.scanner.nextLine();

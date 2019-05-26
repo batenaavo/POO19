@@ -7,19 +7,17 @@ package umcarro.Controllers;
 
 
 
-import umcarro.Controllers.Exceptions.DadosDeAcessoInvalidos;
+
 import umcarro.Controllers.Exceptions.NaoTemPedidos;
 import umcarro.Controllers.Exceptions.OpcaoInvalida;
 import umcarro.Controllers.Exceptions.SemVeiculosDisponiveis;
 import umcarro.Models.*;
 import umcarro.Views.View;
 
-import java.beans.XMLDecoder;
-import java.beans.XMLEncoder;
 import java.io.*;
-import java.util.*;
+import java.util.Date;
 
-public class UMCarro {
+public class UMCarro implements Serializable {
 
     private Cliente cliente;
     private Proprietario proprietario;
@@ -28,6 +26,7 @@ public class UMCarro {
     private Veiculos veiculos;
     private Pedidos pedidos;
     private View view;
+    private DataBaseSaver db = new DataBaseSaver();
 
     public UMCarro() {
         this.proprietarios = new Proprietarios();
@@ -37,8 +36,7 @@ public class UMCarro {
         this.view = new View();
     }
 
-
-    void DataDump(){
+    public void DataDump() throws IOException {
         try {
             /*TODO droppar as primeiras linhas */
             FileReader fr = new FileReader("src/logsPOO_carregamentoInicial.bak");
@@ -401,11 +399,68 @@ public class UMCarro {
         menuProprietario();
     }
 
+
     public View getView() {
         return view;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
 
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-    
+    public Proprietario getProprietario() {
+        return proprietario;
+    }
+
+    public void setProprietario(Proprietario proprietario) {
+        this.proprietario = proprietario;
+    }
+
+    public Clientes getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(Clientes clientes) {
+        this.clientes = clientes;
+    }
+
+    public Proprietarios getProprietarios() {
+        return proprietarios;
+    }
+
+    public void setProprietarios(Proprietarios proprietarios) {
+        this.proprietarios = proprietarios;
+    }
+
+    public Veiculos getVeiculos() {
+        return veiculos;
+    }
+
+    public void setVeiculos(Veiculos veiculos) {
+        this.veiculos = veiculos;
+    }
+
+    public Pedidos getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Pedidos pedidos) {
+        this.pedidos = pedidos;
+    }
+
+    public void setView(View view) {
+        this.view = view;
+    }
+
+    public DataBaseSaver getDb() {
+        return db;
+    }
+
+    public void setDb(DataBaseSaver db) {
+        this.db = db;
+    }
 }

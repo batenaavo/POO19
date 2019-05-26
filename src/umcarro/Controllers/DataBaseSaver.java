@@ -1,40 +1,39 @@
 package umcarro.Controllers;
 
+
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
 
 public class DataBaseSaver {
 
+
     public DataBaseSaver() {
     }
 
-    public void saveData(Object o) {
+    public int loadData(String fileName, UMCarro o) {
         try {
-            FileOutputStream fos = new FileOutputStream(new File("./src/state.xml"));
-            XMLEncoder encoder = new XMLEncoder(fos);
-            encoder.writeObject(o);
-            encoder.flush();
-            encoder.close();
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName));
+            o = (UMCarro)ois.readObject();
+            System.out.println("Loaded Saved Status");
+            ois.close();
+            return 1;
+        }
+        catch (IOException|java.lang.ClassNotFoundException e) {
+            } return 0;
+        }
+
+
+    public void saveData(String fileName, UMCarro o) {
+        try {
+            ObjectOutputStream oos = new ObjectOutputStream((new FileOutputStream(fileName)));
+            oos.writeObject(o);
+            oos.flush();
+            oos.close();
         }
         catch (IOException e) {
-            System.out.println("Falha ao gravar estado");
+            System.out.println("Failed to Save Status");
         }
-    }
+    }}
 
-    public int loadData() throws FileNotFoundException {
-        try {
-            FileInputStream fis = new FileInputStream(new File("./src/estado.xml"));
-            XMLDecoder decoder = new XMLDecoder(fis);
-            UMCarro p = (UMCarro) decoder.readObject();
-            decoder.close();
-            fis.close();
-            return 1;
 
-        } catch (IOException e) {
-            System.out.println("Falha ao ler estado gravado anteriormente");
-            return 0;
-        }
-    }
-
-}

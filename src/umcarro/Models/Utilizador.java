@@ -4,9 +4,12 @@
  * and open the template in the editor.
  */
 package umcarro.Models;
+import java.io.Serializable;
 import java.util.Date;
 
-public class Utilizador {
+public class Utilizador implements Serializable {
+
+    private static final long serialVersionUID = -2354422320077077386L;
     private String nome;
     private Integer nif;
     private String username;

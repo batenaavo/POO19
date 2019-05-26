@@ -3,10 +3,12 @@ package umcarro.Controllers;
 import umcarro.Controllers.Exceptions.SemVeiculosDisponiveis;
 import umcarro.Models.Veiculo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Veiculos {
+
     private ArrayList<Veiculo> veiculos;
 
     public Veiculo getVeiculoByMatricula (String matricula){
@@ -199,4 +201,6 @@ public class Veiculos {
             }
         }
     }
+
+
 }

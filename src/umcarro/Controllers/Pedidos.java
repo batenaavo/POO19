@@ -4,9 +4,12 @@ import umcarro.Controllers.Exceptions.NaoTemPedidos;
 import umcarro.Models.Cliente;
 import umcarro.Models.Pedido;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Pedidos {
+
+
 
     private ArrayList<Pedido> pedidos;
     private Integer pedidosCounter;
@@ -69,6 +72,18 @@ public class Pedidos {
                 porClass.addNewPedido(p);
             } return porClass;
         } throw new NaoTemPedidos();
+    }
+
+    public void setPedidos(ArrayList<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
+    public Integer getPedidosCounter() {
+        return pedidosCounter;
+    }
+
+    public void setPedidosCounter(Integer pedidosCounter) {
+        this.pedidosCounter = pedidosCounter;
     }
     //FIXME
     @Override
