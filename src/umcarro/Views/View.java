@@ -59,7 +59,7 @@ public class View {
         return this.scanner.nextInt();
     }
 
-    public String menuCliente() {
+    public String opcoesCliente() {
         System.out.println("Escolha uma das seguintes opcoes:" +
                 "1: Classificar Proprietario/Veiculo das Última Viagem"+
                 "2: Alugar Carro"+

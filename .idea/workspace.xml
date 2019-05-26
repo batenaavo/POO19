@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java" line="134" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java" line="135" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b8a189-f223-4910-937b-8ac633d7778f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Controllers/UMCarro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Controllers/UMCarro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Proprietario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/UMCarro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Utilizador.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Veiculo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Veiculos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estado.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Controllers/DataBaseSaver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Controllers/DataBaseSaver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Controllers/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Controllers/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/POO19/umcarro/Views/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO19/umcarro/Views/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/umcarro/Controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Controllers/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/umcarro/Views/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/umcarro/Views/View.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +35,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Veiculos.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="588">
+                <state relative-caret-position="3060">
                   <caret line="167" column="38" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
                 </state>
               </provider>
@@ -45,8 +44,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
+                <state relative-caret-position="519">
+                  <caret line="194" column="40" selection-start-line="194" selection-start-column="40" selection-end-line="194" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -57,7 +56,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Clientes.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="337">
+                <state relative-caret-position="380">
                   <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
                 </state>
               </provider>
@@ -66,22 +65,14 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Pedido.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1700">
-                  <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
+                <state relative-caret-position="448">
+                  <caret line="114" selection-start-line="114" selection-end-line="114" />
                   <folding>
                     <element signature="e#2861#2862#0" expanded="true" />
                     <element signature="e#2895#2896#0" expanded="true" />
+                    <element signature="e#2949#2950#0" expanded="true" />
                     <element signature="e#2995#2996#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/DadosDeAcessoInvalidos.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -107,8 +98,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="700">
-                  <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="73" />
+                <state relative-caret-position="760">
+                  <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -119,11 +110,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
-                  <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+                <state relative-caret-position="546">
+                  <caret line="34" column="73" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/DadosDeAcessoInvalidos.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -135,8 +135,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/umcarro/Views/View.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="89" selection-start-line="89" selection-end-line="89" />
+                <state relative-caret-position="306">
+                  <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -188,6 +188,8 @@
       <find>Opção não</find>
       <find>opção não</find>
       <find>registo</find>
+      <find>log</find>
+      <find>menuCliente</find>
     </findStrings>
     <replaceStrings>
       <replace>tipo</replace>
@@ -195,6 +197,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Tiago Gomes &lt;tgomesbz@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -230,10 +237,10 @@
         <option value="$PROJECT_DIR$/src/umcarro/Controllers/Veiculos.java" />
         <option value="$PROJECT_DIR$/src/logsPOO_carregamentoInicial.bak" />
         <option value="$PROJECT_DIR$/src/umcarro/Controllers/ResourceManager.java" />
-        <option value="$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java" />
-        <option value="$PROJECT_DIR$/src/umcarro/Controllers/Main.java" />
         <option value="$PROJECT_DIR$/src/umcarro/Models/Pedido.java" />
         <option value="$PROJECT_DIR$/src/umcarro/Views/View.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/Main.java" />
+        <option value="$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java" />
         <option value="$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java" />
       </list>
     </option>
@@ -271,8 +278,14 @@
               <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
               <item name="POO19" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Clientes" type="1a9f42e2:ClassTreeNode" />
+              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="POO19" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
+              <item name="DadosDeAcessoInvalidos" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="POO19" type="b2602c69:ProjectViewProjectNode" />
@@ -398,7 +411,8 @@
       <workItem from="1558877547226" duration="15223000" />
       <workItem from="1558893308843" duration="20000" />
       <workItem from="1558893425125" duration="68000" />
-      <workItem from="1558893698868" duration="1583000" />
+      <workItem from="1558893698868" duration="2972000" />
+      <workItem from="1558896692584" duration="1134000" />
     </task>
     <task id="LOCAL-00001" summary="Definição de primeiros objetos, e inicialização de alguns métodos">
       <created>1556795248870</created>
@@ -463,11 +477,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558895107743</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Bugs Relacionados com scannerInts e scannerDoubles">
+      <created>1558895426342</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558895426342</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107721000" />
+    <option name="totallyTimeSpent" value="110244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -482,7 +503,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49201742" visible="true" weight="0.13965885" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49201742" visible="true" weight="0.14072494" />
       <window_info id="Structure" order="1" sideWeight="0.5079826" side_tool="true" weight="0.13646056" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -558,7 +579,8 @@
     <MESSAGE value="Restruturação de classes e criação de métodos fulcrais." />
     <MESSAGE value="Validação de pedidos (WIP)" />
     <MESSAGE value="Correcao de Morada&#10;Validacao de nifs iguais impedem registo." />
-    <option name="LAST_COMMIT_MESSAGE" value="Correcao de Morada&#10;Validacao de nifs iguais impedem registo." />
+    <MESSAGE value="Bugs Relacionados com scannerInts e scannerDoubles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugs Relacionados com scannerInts e scannerDoubles" />
   </component>
   <component name="editorHistoryManager">
     <entry file="uml://JavaScript-modules-diagram//Users/tgbz/Google Drive/MyFiles/Uni/POO/Trabalho/POO19" />
@@ -662,22 +684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Pedido.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Veiculos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
-          <folding>
-            <element signature="e#2861#2862#0" expanded="true" />
-            <element signature="e#2895#2896#0" expanded="true" />
-            <element signature="e#2995#2996#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/DadosDeAcessoInvalidos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="3060">
+          <caret line="167" column="38" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -695,23 +705,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="73" />
+        <state relative-caret-position="546">
+          <caret line="34" column="73" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/DataBaseSaver.java">
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Exceptions/DadosDeAcessoInvalidos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        <state relative-caret-position="60">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Models/Pedido.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="e#2861#2862#0" expanded="true" />
+            <element signature="e#2895#2896#0" expanded="true" />
+            <element signature="e#2949#2950#0" expanded="true" />
+            <element signature="e#2995#2996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Clientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -722,31 +759,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Clientes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/Veiculos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="167" column="38" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/umcarro/Views/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="306">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/umcarro/Controllers/UMCarro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
+        <state relative-caret-position="519">
+          <caret line="194" column="40" selection-start-line="194" selection-start-column="40" selection-end-line="194" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

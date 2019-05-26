@@ -103,7 +103,7 @@ public class UMCarro implements Serializable {
         }
 
     }
-    void login() throws DadosDeAcessoInvalidos, SemVeiculosDisponiveis, OpcaoInvalida, NaoTemPedidos {
+    void login() throws SemVeiculosDisponiveis, OpcaoInvalida, NaoTemPedidos {
         this.view.printMensagem("Utilizador(email): ");
         String user = this.view.getString();
         this.view.printMensagem("Password:  ");
@@ -115,7 +115,8 @@ public class UMCarro implements Serializable {
         } else if (this.proprietarios.getProprietariosByUser(user)!=null && this.proprietarios.getProprietariosByUser(user).validaPassword(pwd)) {
             proprietario = this.proprietarios.getProprietariosByUser(user);
             menuProprietario();
-        } else throw new DadosDeAcessoInvalidos();
+        } else System.out.println("Dados de acesso inválidos!");
+        this.view.menuInicial();
 
     }
 
@@ -168,7 +169,7 @@ public class UMCarro implements Serializable {
 
     private void menuCliente() throws SemVeiculosDisponiveis, OpcaoInvalida, NaoTemPedidos {
 
-        String optionSelected = this.view.menuCliente();
+        String optionSelected = this.view.opcoesCliente();
         switch (optionSelected) {
             case "1":
                 Pedidos ps = this.pedidos.getPedidosPorClassificarDeCliente(this.cliente);
@@ -191,6 +192,7 @@ public class UMCarro implements Serializable {
                 menuAluguer();
                 break;
             case "3":
+                this.view.menuInicial();
                 break;
             default : throw new OpcaoInvalida();
         }
@@ -305,6 +307,8 @@ public class UMCarro implements Serializable {
                 pedidosManager();
                 break;
             case "5":
+                this.view.menuInicial();
+
 
         }
     }

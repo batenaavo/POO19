@@ -36,11 +36,11 @@ public class Main {
                 case "3":
                     sair = true;
                     app.getView().printMensagem("Obrigado!");
+                    db.saveData(app);
 
                     break;
                 default:
                     app.getView().printMensagem("Opção não encontrada!");
-                    db.saveData("estado",app);
                     break;
             }
         }
