@@ -19,7 +19,7 @@ import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.*;
 
-public class UMCarro implements Serializable {
+public class UMCarro {
 
     private Cliente cliente;
     private Proprietario proprietario;
@@ -200,7 +200,7 @@ public class UMCarro implements Serializable {
 
     }
 
-    private void menuAluguer() throws SemVeiculosDisponiveis {
+    private void menuAluguer() throws SemVeiculosDisponiveis, OpcaoInvalida, NaoTemPedidos {
         this.view.printMensagem("Indique a sua localização actual x:");
         Double locX = this.view.getDouble();
         this.view.printMensagem("Indique a sua localização actual y:");
@@ -236,6 +236,7 @@ public class UMCarro implements Serializable {
             case 2:
                 Veiculo veiculoMaisProximo = veiculos.selectMaisProximo(locX, locY, veiculosRelevantes);
                 confirmationVehicle(this.cliente.getNif(), tripX, tripY, "MaisPerto", veiculoMaisProximo);
+                menuCliente();
                 break;
             case 3:
                 this.view.printMensagem("Indique a distância máxima à qual pretende encontrar uma viatura disponível");
@@ -244,16 +245,19 @@ public class UMCarro implements Serializable {
                     tripX, tripY,
                         veiculosRelevantes);
                 confirmationVehicle(this.cliente.getNif(), tripX, tripY, "MaisBaratoAlcançavel", vSelecionado);
+                menuCliente();
                 break;
             case 4:
                 Veiculo vSelec1 = veiculos.selectVeiculoEspecifico(veiculosRelevantes);
                 confirmationVehicle(this.cliente.getNif(), tripX, tripY, "VeiculoEspecifico", vSelec1);
+                menuCliente();
                 break;
             case 5:
                 this.view.printMensagem("Indique a autonomia desejada:");
                 Double autonomiaDes = this.view.getDouble();
                 Veiculo vSelec2 = veiculos.selectVeiculoAutonomia(autonomiaDes, veiculosRelevantes);
                 confirmationVehicle(this.cliente.getNif(), tripX, tripY, "VeiculoAutonomia", vSelec2);
+                menuCliente();
                 break;
 
         }
@@ -262,22 +266,24 @@ public class UMCarro implements Serializable {
 
 
     public boolean confirmationVehicle(Integer nif,  Double cordXDest, Double cordYDest,
-                                           String preferencia, Veiculo v){
-        //PRINT DO OBJECTO Veiculo ???? WTF ???? TALVEZ v.toString()
-        System.out.print(v);
-        //???
+                                           String preferencia, Veiculo v) throws SemVeiculosDisponiveis, NaoTemPedidos, OpcaoInvalida {
+        System.out.print(v.toString());
         this.view.printMensagem("Confirma a sua seleção? (Y/N)?");
+        this.view.getString();
         String resp = this.view.getString();
         if (resp.equals("Y") || resp.equals("y")) {
             Pedido p = new Pedido(this.cliente.getNif(),v.getNif(), cordXDest, cordYDest, v.getMatricula(),
                     preferencia, true,true,0.0);
             p.setPrecoViagem(getTravelDist(p));
             this.pedidos.addNewPedido(p);
+            menuCliente();
             return true;
         } else if (resp.equals("N") || resp.equals("n")){
+            menuCliente();
             return false;
         } else {
             this.view.printMensagem("Resposta Inválida");
+            menuCliente();
             return false;
         }
     }

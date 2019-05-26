@@ -24,20 +24,20 @@ public class View {
 
     public String opcoesPedidos() {
         System.out.println("Escolha uma das seguintes opções" +
-                "1: Aceitar." +
-                "2: Recusar."+
-                "3: Re-selecionar pedido." +
-                "4: Voltar ao menu anterior");
+                "1: Aceitar.\n" +
+                "2: Recusar.\n"+
+                "3: Re-selecionar pedido.\n" +
+                "4: Voltar ao menu anterior.\n");
         return this.scanner.nextLine();
     }
 
     public String opcoesProprietario() {
         System.out.println("Selecione a sua opção\n" +
-                "1: Abastecer Carro(alterar autonomia)." +
-                "2: Alterar preço por km de Veículo. (km)." +
-                "3: Adicionar Carro." +
-                "4: Ver propostas de cliente." +
-                "5: Logout");
+                "1: Abastecer Carro(alterar autonomia).\n" +
+                "2: Alterar preço por km de Veículo. (km).\n" +
+                "3: Adicionar Carro.\n" +
+                "4: Ver propostas de cliente.\n" +
+                "5: Logout.\n");
         return this.scanner.nextLine();
     }
 
@@ -60,10 +60,10 @@ public class View {
     }
 
     public String opcoesCliente() {
-        System.out.println("Escolha uma das seguintes opcoes:" +
-                "1: Classificar Proprietario/Veiculo das Última Viagem"+
-                "2: Alugar Carro"+
-                "3: Logout");
+        System.out.println("Escolha uma das seguintes opcoes:\n" +
+                "1: Classificar Proprietario/Veiculo das Última Viagem.\n"+
+                "2: Alugar Carro.\n"+
+                "3: Logout.\n");
         return this.scanner.nextLine();
     }
 
